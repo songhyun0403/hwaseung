@@ -1,0 +1,628 @@
+@charset 'utf-8';
+
+.inner {
+  width: 140rem;
+  margin: 0 auto;
+  background: rgba(255, 255, 0, 0.3);
+}
+
+.inner-wide {
+  width: 160rem;
+}
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+#header nav {
+  height: 9.5rem;
+  background: #5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: block;
+  width: 17rem;
+  height: 2.4rem;
+  background: url(../img/logo.svg) no-repeat 0 0;
+  z-index: 10;
+}
+.gnb {
+  display: flex;
+  margin-right: auto;
+  margin-left: 6.5rem;
+  z-index: 10;
+}
+
+.gnb > li > a {
+  display: block;
+  border: 1px solid #000;
+  padding: 1rem 2.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.gnb > li {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+
+  display: none;
+}
+
+.submenu li a {
+  display: block;
+  border: 1px solid pink;
+  padding: 10px;
+  text-align: center;
+  background: #333;
+  color: #fff;
+}
+
+.util {
+  display: flex;
+}
+
+.btn-lang {
+  width: 5.5rem;
+  height: 2.5rem;
+  background: #000;
+  background: url(../img/ico1.svg) no-repeat 0 0;
+}
+.btn-menu {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: red;
+  background: url(../img/ico2.svg) no-repeat 0 0;
+}
+
+.visual {
+  height: 108rem;
+  background: skyblue;
+  position: relative;
+}
+
+.video {
+  height: 100%;
+  border: 10px solid #000;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.visual .inner {
+  position: relative;
+  height: 100%;
+}
+
+.visual-con {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: #55f;
+}
+
+.visual-con h2 {
+  font-weight: 700;
+  font-size: 7rem;
+  color: #fff;
+  line-height: 1.2142;
+  letter-spacing: -0.25px;
+}
+
+.visual-con a {
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.sec-title {
+  background: khaki;
+  font-weight: 700;
+  color: var(--title-color);
+}
+.sec-title h3 {
+  font-size: 2.4rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.9rem;
+  background: #5f5;
+}
+
+.sec-title h3::after {
+  content: '';
+  display: block;
+  width: 13rem;
+  height: 1px;
+  background: #9c9c9c;
+  margin-bottom: 0.5rem;
+}
+.sec-title p {
+  font-size: 4.8rem;
+  line-height: 1.4;
+  margin-top: 4.5rem;
+}
+
+.business {
+  padding: 17rem 0 9rem;
+}
+
+.business-list {
+  display: flex;
+  margin-top: 7rem;
+}
+.business-list li {
+  border: 1px solid #000;
+  height: 37rem;
+
+  flex: 1 1 20%;
+}
+
+.business-list li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* 글씨를 바다에 붙이기 */
+  align-items: center;
+  border: 1px solid #f00;
+  width: 100%;
+  height: 100%;
+  padding: 2.7rem;
+  font-weight: 600;
+  font-size: 2.6rem;
+  color: #fff;
+}
+
+.pr {
+  padding: 8rem 0 10rem;
+}
+
+.pr-list {
+  display: flex;
+  gap: 2rem;
+
+  margin-top: 7rem;
+}
+
+.pr-list li {
+  border: 1px solid #000;
+  height: 50.2rem;
+  flex: 1 1 30%;
+  padding: 1.7rem;
+}
+
+.pr-list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  font-weight: 700;
+  font-size: 2.6rem;
+  color: #fff;
+}
+
+.management {
+  background: #f3f3f3;
+  padding: 8rem 0 10rem;
+}
+
+.management-list {
+  background: tomato;
+  height: 368px;
+}
+
+.heritage {
+  padding: 18rem 0 19.2rem;
+}
+
+.heritage-con {
+  background: #5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.heritage-con h4 {
+  font-weight: 900;
+  font-size: 7.2rem;
+  color: var(--title-color);
+}
+.heritage-con strong {
+  font-weight: 600;
+  font-size: 3.6rem;
+  color: var(--title-color);
+  margin-top: 6rem;
+}
+.heritage-con p {
+  margin-top: 4rem;
+  font-size: 2.4rem;
+}
+.heritage-con a {
+  display: flex;
+  gap: 1.2rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: var(--title-color);
+  margin-top: 8.2rem;
+
+  align-self: flex-end; /* asfe : 교차축 방향을 아이템 개별 배치 */
+  align-items: center;
+}
+
+.heritage-con a::after {
+  content: '';
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: url(../img/ico3.svg) no-repeat 50%;
+}
+
+#footer {
+  padding: 11.6rem 0 13.3rem;
+  background: url(https://www.hwaseunggroup.com/kor/assets/img/common/footer_bg_.png)
+    no-repeat 0 0 / cover fixed;
+}
+
+.family-site {
+  border: 1px solid #fff;
+  width: 28.6rem;
+  height: 5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.family-site select {
+  background: transparent;
+  color: #fff;
+  appearance: none;
+  padding: 0 1.5rem;
+
+  flex: 1 1 auto;
+}
+
+.family-site select option {
+  background: #333;
+  color: #fff;
+}
+
+.family-site ::after {
+  content: '';
+  display: block;
+  background: #f00;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.foot-copyright {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 7rem;
+  padding-top: 3.2rem;
+  text-align: center;
+  font-weight: 200;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.foot-links {
+  border: 1px solid #f00;
+  display: flex;
+  justify-content: space-between;
+}
+
+.foot-menu {
+  background: #5f5;
+}
+
+.foot-menu ul {
+  display: flex;
+  gap: 14rem;
+}
+.foot-menu ul li {
+  border: 1px solid #ff0;
+}
+
+.foot-menu ul li dl dt {
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: #fff;
+}
+.foot-menu ul li dl dd {
+  font-weight: 200;
+  font-size: 1.8rem;
+  line-height: 1.89;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.foot-menu ul li dl dd:first-of-type {
+  margin-top: 3.6rem;
+}
+.foot-family {
+  background: #55f;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.policy-list {
+  margin-top: 3rem;
+  display: flex;
+  gap: 2rem;
+}
+.policy-list li a {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.sns-list {
+  margin-top: 12.6rem;
+}
+
+.sns-list > a {
+  display: block;
+  width: 3.6rem;
+  height: 3.6rem;
+  background: #f00 no-repeat 50%;
+}
+.sns-list > a {
+  background-image: url(../img/ico-insta.png);
+}
+
+/* inner크기와 같은 분기점 생성 */
+@media (max-width: 1600px) {
+  .inner,
+  .inner-wide {
+    width: 924px;
+    width: 90.2344%;
+  }
+
+  .foot-menu ul {
+  }
+}
+
+/* 태블릿 디자인 */
+@media (max-width: 1024px) {
+  /* .inner .inner-wide {
+    width: 924px;
+    width: 90.2344%;
+  } */
+
+  .business-list li a {
+    font-size: 1.8rem;
+  }
+
+  .pr-list li {
+    height: 33.2rem;
+  }
+
+  .heritage-con {
+    width: 71.4rem;
+    width: 77.2727%;
+    margin: 0 auto;
+  }
+
+  .heritage-con strong {
+    font-size: 3.2rem;
+  }
+
+  .heritage-con p {
+    font-size: 2.2rem;
+  }
+
+  .foot-links {
+    width: 82.4rem;
+    width: 89.1775%;
+    margin: 0 auto;
+  }
+
+  .foot-menu ul {
+    gap: 4.4rem;
+  }
+
+  .foot-menu ul li dl dt {
+    font-size: 1.8rem;
+  }
+  .foot-menu ul li dl dd {
+    font-size: 1.6rem;
+  }
+
+  .family-site {
+    width: 24rem;
+    height: 3rem;
+    font-size: 1.4rem;
+  }
+}
+
+/* 문제가 발생하는 해상도를 위한 분기 */
+@media (max-width: 1000px) {
+  #header nav {
+    justify-content: space-between;
+  }
+  .gnb {
+    display: none;
+  }
+
+  .business-list {
+    flex-wrap: wrap;
+  }
+
+  .business-list li {
+    flex: 1 1 30%;
+  }
+
+  .foot-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .foot-family {
+    align-items: center;
+  }
+
+  .family-site {
+    margin-top: 4rem;
+  }
+
+  .sns-list {
+    order: -1; /* od : 쌓이는 순서 달라지게 하고 싶을 때*/
+    margin-top: 0;
+  }
+
+  .policy-list {
+    margin-top: 2.2rem;
+  }
+
+  .policy-list li a {
+    font-size: 1.4rem;
+  }
+
+  .foot-copyright {
+    margin-top: 3.8rem;
+  }
+}
+
+/* 모바일 디자인 */
+
+@media (max-width: 700px) {
+  :root {
+    font-size: 90%;
+  }
+  .inner,
+  .inner-wide {
+    /* width: 350px; */
+    width: 89.7436%;
+  }
+
+  #header nav {
+    height: 5.7rem;
+  }
+
+  .logo a {
+    width: 8.5rem;
+    height: 1.2rem;
+  }
+
+  .btn-lang {
+    width: 3.7rem;
+    height: 1.7rem;
+  }
+
+  .btn-menu {
+    width: 3.7rem;
+    height: 1.7rem;
+  }
+
+  .visual {
+    height: 54rem;
+  }
+
+  .visual-con h2 {
+    font-size: 3rem;
+  }
+
+  .visual-con a {
+    font-size: 1.3rem;
+  }
+
+  #container > section:not(.visual) {
+    padding: 9rem 0;
+  }
+
+  .sec-title h3 {
+    font-size: 1.2rem;
+  }
+
+  .sec-title p {
+    font-size: 2.2rem;
+  }
+
+  .business-list li {
+    flex: 0 1 50%;
+    height: 21rem;
+  }
+
+  .business-list li {
+    font-size: 1.5rem;
+  }
+
+  .pr-list {
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+
+  .pr-list li {
+    flex: 1 1 45%;
+    height: 19.2rem;
+  }
+
+  .pr-list li a {
+    font-size: 1.4rem;
+  }
+
+  .heritage-con {
+    width: 100%;
+  }
+
+  .heritage-con h4 {
+    font-size: 3rem;
+  }
+  .heritage-con strong {
+    font-size: 1.6rem;
+  }
+  .heritage-con p {
+    font-size: 1.3rem;
+  }
+  .heritage-con a {
+    /* background: #55f; */
+    font-size: 1.3rem;
+    width: 28.4em;
+    width: 81.1429%;
+    height: 3.8rem;
+    border: 1px solid #000;
+    border-radius: 50px;
+    justify-content: center;
+    align-self: center;
+    align-self: initial;
+    /* align-self: unset; */
+  }
+
+  #footer {
+    padding: 6.3rem 0 8rem;
+  }
+
+  .foot-menu {
+    display: none;
+  }
+
+  .foot-links {
+    width: 19.4rem;
+    width: 55.4286%;
+    display: block;
+  }
+
+  .family-site {
+    width: 100%;
+    height: 3.5rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    font-size: 62.5%;
+  }
+}
