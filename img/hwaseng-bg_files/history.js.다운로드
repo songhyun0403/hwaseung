@@ -1,0 +1,826 @@
+var overview = $('.feature.overview');
+
+if (overview.length) {
+
+    overview.objList = $('.feature.overview .obj_list ul');
+
+    if (overview.objList.length) {
+
+        if (page.mode === PAGE_MOBILE) {
+
+            overview.objList.customScrollbar();
+
+        }
+
+
+
+        $(window).on('resize', function() {
+
+            if (page.modeChanged) {
+
+                if (page.mode === PAGE_PC) {
+
+                    overview.objList.destroyCustomScrollbar();
+
+                }
+
+            }
+
+
+
+            if (page.mode === PAGE_MOBILE) {
+
+                overview.objList.customScrollbar();
+
+            }
+
+        });
+
+    }
+
+}
+
+
+
+var featureHistoryTabmenu = $('.feature.history_tabmenu');
+
+if (featureHistoryTabmenu.length) {
+
+    featureHistoryTabmenu.tabmenu = featureHistoryTabmenu.find('.tabmenu > ul');
+
+
+
+    var objList = $('.feature.overview .obj_list ul');
+
+    var affList = $('.feature.aff_list');
+
+    var subscribers = $().add(objList).add(affList);
+
+
+
+    featureHistoryTabmenu.tabmenu.data('for', subscribers);
+
+
+
+    objList.data('update-tabmenu', (function(index, menu) {
+
+        objList.find('li').removeClass('active');
+
+        objList.find('li').eq(index).addClass('active');
+
+    }).bind(objList));
+
+}
+
+
+
+var affList = $('.feature.aff_list');
+
+if (affList.length) {
+
+    affList.list = affList.find('.inner > ul');
+
+    affList.dataList = affList.list.find('> li').clone();
+
+
+
+    affList.getIndex = function(item) {
+
+        var element = item[0];
+
+        var index = -1;
+
+
+
+        affList.dataList.each(function(i) {
+
+            if (this === element) {
+
+                index = i;
+
+                return false;
+
+            }
+
+        });
+
+
+
+        return index;
+
+    }
+
+    affList.popup = function(index, focus) {
+
+        if (popup.data('popup') !== void 0) {
+
+            return;
+
+        }
+
+
+
+        if (index < 0 || index > popup.find('.popup_cont > li').length - 1) {
+
+            return;
+
+        }
+
+
+
+        var content = popup.find('.popup_cont > li').eq(index);
+
+
+
+        popup.data('popup', true);
+
+        popup.data('type', 'affList');
+
+        if (focus !== void 0) {
+
+            popup.data('focus', focus);
+
+        }
+
+
+
+        content.css({'display': 'block'});
+
+
+
+        htmlFix(true);
+
+    
+
+        popup.stop().css({'display': 'block', 'opacity': 0, 'overflow': 'auto'});
+
+        popup.animate({'opacity': 1}, 500, function() {
+
+            setTimeout(function() {
+
+	            popup.scrollTop(0);
+
+			}, 10);
+
+            
+
+            popup.removeData('popup');
+
+        });
+
+    }
+
+
+
+    affList.update = function(filterName) {
+
+        affList.list.html(affList.dataList.filter(function() {
+
+            return filterName === void 0 || filterName === $(this).attr('data-filter');
+
+        }));
+
+    }
+
+
+
+    affList.list.on('mouseenter', 'li > a', function() {
+
+        if (page.mode === PAGE_PC) {
+
+            var img = $(this).find('.aff_tit_wrap img');
+
+            var src = img.attr('src');
+
+            img.attr('src', src.substring(0, src.lastIndexOf('.')) + '_hover.' + /[^.]+$/.exec(src));
+
+        }
+
+    }).on('mouseleave', 'li > a', function() {
+
+        if (page.mode === PAGE_PC) {
+
+            var img = $(this).find('.aff_tit_wrap img');
+
+            var src = img.attr('src').split('_hover').join('');
+
+            img.attr('src', src.substring(0, src.lastIndexOf('.')) + '.' + /[^.]+$/.exec(src));
+
+        }
+
+    });
+
+
+
+    affList.on('click', 'li > a', function() {
+
+        var button = $(this), index = affList.getIndex(button.parent());
+
+
+
+        affList.popup(index, button);
+
+    
+
+        return false;
+
+    });
+
+
+
+    affList.data('update-tabmenu', (function(index, menu) {
+
+        affList.update(index === 0 ? void 0 : menu.text().toLowerCase());
+
+    }).bind(affList));
+
+
+
+    popup.data('affList', function() {
+
+        if (popup.data('popup') !== void 0) {
+
+
+            return;
+
+        }
+
+    
+
+        popup.data('popup', true);
+
+
+
+        var contents = popup.find('.popup_cont > li');
+
+    
+
+        popup.stop().css({'display': 'block', 'opacity': 1});
+
+        popup.animate({'opacity': 0}, 500, function() {
+
+            contents.css({'display': ''});
+
+            
+
+            popup.scrollTop(0);
+
+            popup.css({'display': '', 'opacity': '', 'overflow': ''});
+
+            
+
+            if (popup.data('focus') !== void 0) {
+
+                popup.data('focus').focus();
+
+            }
+
+    
+
+            htmlFix(false);
+
+    
+
+            popup.removeData('focus');
+
+            popup.removeData('popup');
+
+        });
+
+    });
+
+
+
+    affList.update();
+
+
+
+    if (typeof page.params['id'] !== 'undefined') {
+
+        var index = parseInt(page.params['id']) - 1, button = affList.list.find('li > a').eq(index);
+
+
+
+        affList.popup(index, button);
+
+    }
+
+}
+
+
+
+var stakeholderPolicy = $('.feature.stakeholder_policy');
+
+if (stakeholderPolicy.length) {
+
+    stakeholderPolicy.table = stakeholderPolicy.find('.table_cont.m_scroll');
+
+    if (stakeholderPolicy.table.length) {
+
+        if (page.mode === PAGE_MOBILE) {
+
+            stakeholderPolicy.table.customScrollbar();
+
+        }
+
+
+
+        $(window).on('resize', function() {
+
+            if (page.modeChanged) {
+
+                if (page.mode === PAGE_PC) {
+
+                    stakeholderPolicy.table.destroyCustomScrollbar();
+
+                }
+
+            }
+
+
+
+            if (page.mode === PAGE_MOBILE) {
+
+                stakeholderPolicy.table.customScrollbar();
+
+            }
+
+        });
+
+    }
+
+}
+
+
+
+// Seah News
+
+var seahNews = $('.feature.seah_news');
+
+if (seahNews.length) {
+
+    seahNews.slider = seahNews.find('.slide_cont > ul');
+
+    seahNews.find('.slide_obj').on('click', '> button', function() {
+
+        var jE = $(this);
+
+    
+
+        if (jE.hasClass('prev_btn')) {
+
+            seahNews.slider.prevSlide();
+
+        } else if (jE.hasClass('next_btn')) {
+
+            seahNews.slider.nextSlide();
+
+        }
+
+    });
+
+    
+
+    if (page.mode === PAGE_PC) {
+
+        seahNews.slider.generateSlide(1, 2);
+
+    } else {
+
+        seahNews.slider.generateScrollbar();
+
+    }
+
+    seahNews.resize = function() {
+
+        if (page.modeChanged) {
+
+            if (page.mode === PAGE_PC) {
+
+                seahNews.slider.removeScrollbar();
+
+                seahNews.slider.generateSlide(1, 2);
+
+            } else {
+
+                seahNews.slider.removeSlide();
+
+                seahNews.slider.generateScrollbar();
+
+            }
+
+        } else {
+
+            if (page.mode === PAGE_MOBILE) {
+
+                seahNews.slider.generateScrollbar();
+
+            }
+
+        }
+
+    };
+
+    $(window).on('resize', seahNews.resize);
+
+}
+
+
+
+var financeStatus = $('.feature.finance_status');
+
+if (financeStatus.length) {
+
+    financeStatus.table = financeStatus.find('.table_cont.m_scroll');
+
+    if (financeStatus.table.length) {
+
+        if (page.mode === PAGE_MOBILE) {
+
+            financeStatus.table.customScrollbar();
+
+        }
+
+
+
+        $(window).on('resize', function() {
+
+            if (page.modeChanged) {
+
+                if (page.mode === PAGE_PC) {
+
+                    financeStatus.table.destroyCustomScrollbar();
+
+                }
+
+            }
+
+
+
+            if (page.mode === PAGE_MOBILE) {
+
+                financeStatus.table.customScrollbar();
+
+            }
+
+        });
+
+    }
+
+}
+
+
+
+var executionStatus = $('.feature.execution_status');
+
+if (executionStatus.length) {
+
+    executionStatus.table = executionStatus.find('.table_cont.m_scroll');
+
+    if (executionStatus.table.length) {
+
+        if (page.mode === PAGE_MOBILE) {
+
+            executionStatus.table.customScrollbar();
+
+        }
+
+
+
+        $(window).on('resize', function() {
+
+            if (page.modeChanged) {
+
+                if (page.mode === PAGE_PC) {
+
+                    executionStatus.table.destroyCustomScrollbar();
+
+                }
+
+            }
+
+
+
+            if (page.mode === PAGE_MOBILE) {
+
+                executionStatus.table.customScrollbar();
+
+            }
+
+        });
+
+    }
+
+}
+
+
+
+var directorate = $('.feature.directorate');
+
+if (directorate.length) {
+
+    directorate.table = directorate.find('.table_cont.m_scroll');
+
+    if (directorate.table.length) {
+
+        if (page.mode === PAGE_MOBILE) {
+
+            directorate.table.customScrollbar();
+
+        }
+
+
+
+        $(window).on('resize', function() {
+
+            if (page.modeChanged) {
+
+                if (page.mode === PAGE_PC) {
+
+                    directorate.table.destroyCustomScrollbar();
+
+                }
+
+            }
+
+
+
+            if (page.mode === PAGE_MOBILE) {
+
+                directorate.table.customScrollbar();
+
+            }
+
+        });
+
+    }
+
+}
+
+
+
+var historyWrap = $('.feature .history_wrap');
+
+if (historyWrap.length) {
+
+    var targetTabmenu = $('.history_tabmenu > ul');
+
+    if (targetTabmenu.length) {
+
+        var currentHistory = null;
+
+
+
+        historyWrap.current = function() {
+
+            return historyWrap.filter(function() { return $(this).parents('.feature').hasClass('active'); });
+
+        }
+
+        historyWrap.update = function() {
+
+            currentHistory = historyWrap.current();
+
+            currentHistory.year = currentHistory.find('.history_year');
+
+            currentHistory.year.quick = currentHistory.year.find('.year_quick');
+
+            currentHistory.year.list = currentHistory.year.quick.find('> li');
+
+            currentHistory.year.set = function(index) {
+
+                currentHistory.year.list.removeClass('active');
+
+                currentHistory.year.list.eq(index).addClass('active');
+
+                currentHistory.year.update();
+
+            };
+
+            currentHistory.year.update = function() {
+
+                currentHistory.year.current = currentHistory.year.list.filter(function() { return $(this).hasClass('active'); });
+
+            };
+
+            currentHistory.year.position = function() {
+
+                var margin = parseFloat(currentHistory.year.quick.style('margin-top'));
+
+                var wrapOffset = currentHistory.year.offset().top;
+
+                var listOffset = currentHistory.year.current.offset().top;
+
+                var value = wrapOffset + margin - listOffset;
+
+                currentHistory.year.quick.css({'margin-top': value});
+
+            }
+
+            currentHistory.list = currentHistory.find('.history_list');
+
+            currentHistory.list.items = currentHistory.list.find('> li');
+
+            currentHistory.list.set = function(index) {
+
+                currentHistory.list.items.removeAttr('data-active');
+
+                currentHistory.list.items.eq(index).attr('data-active', true);
+
+            };
+
+			currentHistory.indicator = currentHistory.find('.indicator');
+
+
+
+            currentHistory.year.update();
+
+            updateHistory();
+
+        }
+
+
+
+        function updateHistory() {
+
+            var current = currentHistory;
+
+
+
+            var wrapMargin = parseFloat(current.style('margin-top'));
+
+            var wrapBase = current.offset().top - wrapMargin;
+
+            var wrapValue = page.top - wrapBase;
+
+            var wrapMax = parseFloat(current.style('height')) - parseFloat(current.year.style('height'));
+
+
+
+            var mode = (wrapValue > 0 && wrapMax > wrapValue ? 1 : wrapValue >= wrapMax ? 2 : 0);
+
+            current.modeChanged = current.mode !== mode;
+
+            current.mode = mode;
+
+
+
+            if (current.modeChanged) {
+
+                switch(mode) {
+
+                    case 0:
+
+                        current.removeClass('fixed');
+
+                        current.year.css({'top': ''});
+
+						currentHistory.indicator.css({'top': ''});
+
+                        break;
+
+                    case 1:
+
+                        current.addClass('fixed');
+
+                        current.year.css({'top': ''});
+
+						currentHistory.indicator.css({'top': ''});
+
+                        break;
+
+                    case 2:
+
+						var moveYearTop = wrapMax;
+
+						var moveDotTop = parseFloat(current.style('height')) - parseFloat(current.indicator.style('height'));
+
+
+
+						current.removeClass('fixed');
+
+                        current.year.css({'top': moveYearTop});
+
+						currentHistory.indicator.css({'top': moveDotTop});
+
+                        break;
+
+                    default:
+
+                }
+
+            }
+
+
+
+            var currentYear = currentHistory.list.items.filter(function() {
+
+                return $(this).offset().top <= currentHistory.indicator.offset().top;
+
+            }).last();
+
+            var currentYearIndex = Math.min(currentHistory.list.items.length - 1, currentYear.index());
+
+			if (mode > 1) {
+
+				currentYearIndex = currentHistory.list.items.length - 1;
+
+			}
+
+
+
+			currentHistory.year.set(currentYearIndex);
+
+			currentHistory.year.position();
+
+
+
+			currentHistory.list.set(currentYearIndex);
+
+        }
+
+
+
+        function moveHistory() {
+
+            var button = $(this);
+
+            var index = button.parent().index();
+
+
+
+            var item = currentHistory.list.items.eq(index);
+
+			var itemBase = item.find('dl').first();
+
+            var current = currentHistory;
+
+            var move = itemBase.offset().top - parseFloat(current.indicator.style('top')) + (parseFloat(current.indicator.style('height')) / 2);
+
+            var duration = Math.abs(page.top - move) / 4;
+
+
+
+            $('html').animate({'scrollTop': move}, duration);
+
+
+
+            return false;
+
+        }
+
+        
+
+        targetTabmenu.data('update-tabmenu', function(index, targetMenu) {
+
+            historyWrap.update();
+
+
+
+			currentHistory.list.set(0);
+
+        });
+
+        targetTabmenu.data('for', targetTabmenu);
+
+        historyWrap.find('.year_quick').on('click', '> li > a', moveHistory);
+
+
+
+        $(window).on('load resize scroll', function() {
+
+            updateHistory();
+
+        });
+
+
+
+        historyWrap.update();
+
+
+
+		currentHistory.list.set(0);
+
+    }
+
+}
+
+/* 스크롤 */
+
+$(function() {
+	$(window).scroll(function(e) {
+	   
+		/* 부드럽게 위로 이 동*/
+		if ($(this).scrollTop() > 500) {
+			$('.history-float-btns').fadeIn(150);
+		} else {
+			$('.history-float-btns').fadeOut(150);
+		}
+	});
+
+	/* 부드럽게 상단으로 이동 */
+	$('.btn-top-go').click(function() {
+		var offset = $('#history_tabmenu').offset(); 
+		$('html').animate({scrollTop : offset.top - 30}, 400);		
+	});
+});

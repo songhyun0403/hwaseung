@@ -1,0 +1,3156 @@
+@charset "UTF-8";
+@import url("contents_pc.css");
+
+@media only all and (max-width: 1023px) {
+
+    .mW14{
+        max-width: 88.8% !important;
+    }
+
+    .mW15{
+        max-width: 100% !important;
+    }
+
+    .bullet-title-wrapper{
+        float: none !important;
+        clear: both !important;
+
+        width: 100%;
+    }
+
+    .busi-info-area .bullet-title-wrapper{
+    width: 100%;
+    }
+
+
+    .sub-visual-wrapper{
+        height: 600px;
+    }
+
+    .sub-visual-area{
+        min-width: calc(100% - 40px);
+    }
+
+    .sub-menu-tit span{
+        font-size: 20px;
+        line-height: 127%;
+    }
+
+    .sub-slogan-area span{
+        font-size: 44px;
+        line-height: 125%;
+    }
+
+    .sub-contents-box:not(:first-child){
+        padding-top: 75px;
+    }
+
+
+    .sub-visual-bg.ci img{
+        display: none;
+    }
+
+
+    .sub-visual-bg.ci img.mobile{
+        display: block;
+        width: 100%;
+        min-width: unset;
+    }
+
+    .sub-contents-area{
+        padding-top: 85px;
+    }
+
+    /* 3차 탭 */
+
+    .depth3-btns-area{
+        display: none;
+    }
+
+    .depth3-btns-area.mobile{
+        display: block;
+        position: relative;
+    }
+
+
+    .depth3-btns-wrapper li:not(:nth-child(7n)){
+        margin-right: unset;
+        width: unset;
+    }
+
+    .current-depth3-name{
+        width: 100%;
+        padding: 16px;
+        position: relative;
+
+        border: 1px solid #b8b8b8;
+        border-radius: 4px;
+    }
+
+    .current-depth3-name span{
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        color: #5f5f5f;
+        font-weight: 600;
+    }
+
+    .current-depth3-name.active img{
+        display: none;
+    }
+
+    .current-depth3-name.active::after{
+        display: block;
+        content: '';
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 12px;
+
+        background-size: 80% 80%;
+        background: url(../../assets/img/common/arrow_up_black_01.svg) no-repeat;
+        background-position: center center;
+    }
+
+    .current-depth3-name img{
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+    }
+
+    .depth3-btns-area.mobile ul{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 36;
+        background-color: #fff;
+
+        border: 1px solid #d1d1d1;
+
+        display: none;
+    }
+
+    .depth3-btns-wrapper li a{
+        padding-bottom: 24px;
+        padding-top: 24px;
+        font-weight: 400;
+
+        height: unset;
+        font-size: 16px;
+
+        color: #949494;
+
+        width: fit-content;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .depth3-btns-wrapper li:not(:last-child){
+        border-bottom: 1px solid #d1d1d1;
+    }
+
+    .depth3-btns-area li.active a{
+        animation-name: unset;
+        color: #173271;
+        font-weight: 600;
+        position: relative;
+
+        width: fit-content;
+        margin: 0 auto;
+
+    }
+
+    .depth3-btns-area li.active a::before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background-color: #173271;
+        border-radius: 100%;
+
+        top: 48%;
+        left: -12px;
+        transform: translateY(-50%);
+    }
+
+    .depth3-btns-area li:hover a::before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background-color: #173271;
+        border-radius: 100%;
+
+        top: 48%;
+        /* left: -12px; */
+        left: 0;
+        opacity: 0;
+        transform: translateY(-50%);
+
+        animation-name: mobileboardTab-menu;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        animation-duration: 0.3s;
+    }
+
+    @keyframes mobileboardTab-menu{
+
+        0%{
+            left: 0;
+            opacity: 0;
+        }
+
+        100%{
+            left: -12px;
+            opacity: 1;
+        }
+
+
+    }
+
+    .depth3-btns-area li.active ::after{
+        animation-name: unset;
+    }
+
+    .depth3-btns-area li.active a{
+        animation-name: unset;
+    }
+
+    .depth3-btns-area li.active ::after{
+        animation-name: unset;
+    }
+
+    .depth3-btns-area li:hover a{
+        animation-name: unset;
+        color: #173271;
+    }
+
+    .depth3-btns-area li:hover::after{
+        animation-name: unset;
+    }
+
+
+
+
+
+
+
+
+
+    /* Seciton2 : sub-contents normal-contents */
+
+    /* normal contents : 사진,글 배치 기본형 */
+
+
+    .sub-contents01 .left{
+        transform: translateY(0px);
+    }
+
+    .sub-contents-box.mgs8{
+        width: 76.1%;
+    }
+
+    .sub-contents-area{
+        /* padding-top: 80px; */
+        padding-top: 110px;
+    }
+
+    .normal-con{
+        width: 100% !important;
+    }
+
+    .normal-con.left{
+        clear: both;
+    }
+
+    .normal-con.right{
+        clear: both;
+    }
+
+    .normal-con.rightCenter{
+        /* padding: 11.1% 5.5% 11.1% 11.1%; */
+        width: 91.1%;
+    }
+
+
+    .normal-con .con-tit{
+        font-size: 18px;
+        margin-bottom: 26px;
+    }
+
+    .normal-con p{
+        font-size: 16px;
+    }
+
+    /* mobile */
+    .txt-con.mobile{
+        display: block !important;
+    }
+
+    .txt-con{
+        margin-top: 30px;
+    }
+
+
+    .bg-con-txt .left,
+    .bg-con-txt .right{
+        width: 46%;
+    }
+
+    .sub-message-wrapper .mobile{
+        display: block;
+    }
+
+
+
+
+    /* 그룹개요 */
+
+    .group .sub-message-tit{
+        display: block;
+    }
+
+    .group .sub-message-tit.mobile{
+        display: none;
+    }
+
+    .group .sub-message-desc{
+        display: block;
+    }
+
+    .group .sub-message-desc.mobile{
+        display: none;
+    }
+
+
+
+
+
+    .group .sub-contents02 .txt-con.mobile{
+        display: block;
+    }
+
+    .group .sub-contents02 .txt-con{
+        display: none;
+    }
+
+
+    .sub-message-wrapper{
+    margin-bottom: 0px;
+}
+
+    .group .sub-message-wrapper{
+        margin-bottom: 50px;
+    }
+
+    .group .sub-contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+
+    .group-tit-wrapper{
+        width:100%;
+        margin-bottom: 25px;
+    }
+
+    .group .sub-contents02 .normal-con{
+        width: 100%;
+    }
+
+    .group .sub-contents02 .normal-con p{
+    margin-bottom: 35px;
+}
+
+    .group .sub-contents-box .sub-contents:first-child .normal-con{
+    padding-right:0px;
+}
+
+    .group .sub-contents .group-tit{
+        width: 100%;
+    }
+
+/*
+    .group .sub-contents02 .img-box img{
+        display: none;
+}
+
+        .group .sub-contents02 .img-box img.mobile{
+        display: block;
+}
+*/
+
+        .group .sub-contents-box .sub-contents:not(:last-child){
+    margin-bottom: 80px;
+}
+
+    .normal-con.rightCenter{
+    bottom: -55px;
+}
+
+
+
+
+
+
+
+
+
+
+    /* 인사말 */
+
+    .greeting.mW16{
+        max-width: 100% !important;
+    }
+
+    .greeting .sub-contents01{
+        display: block;
+        width: calc(100% - 40px);
+    }
+
+    .greeting .sub-contents01 .txt-con{
+        display: none;
+    }
+
+    .greeting .sub-contents01 .txt-con{
+        margin-top: 0px;
+
+        max-width: calc(100% - 40px);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+    .greeting .sub-contents01 .con-tit{
+        width: 100%;
+        margin-bottom: 33px;
+
+
+        font-size: 22px;
+    }
+
+    .greeting .sub-contents01 .con-tit br:first-child{
+        display: none;
+    }
+
+    .greeting .sub-contents01 .right,
+    .greeting .sub-contents01 .left{
+        float: none !important;
+        clear: both;
+        width: 100%;
+    }
+
+    .greeting .sub-contents01 .normal-con p{
+        color: #333;
+        text-align: left;
+        width: 100%;
+    }
+
+    .greeting .sub-contents01 .right{
+        margin-top: 65px;
+    }
+
+    .greeting .bg-con{
+       width: 100%;
+
+       padding: 65px 40px 65px 40px;
+    }
+
+    .greeting .bg-con .mW14{
+    }
+
+
+    /* 연혁 */
+
+    .sub-message-tit span{
+        font-size: 26px;
+        /* font-size: 24px; */
+    }
+
+    .history .sub-message-desc{
+        display: none;
+    }
+
+    .history .sub-message-desc.mobile{
+        display: block;
+    }
+
+    .sub-message-desc span{
+        font-size: 18px;
+        /* font-size: 17px; */
+    }
+
+    .history .sub-contents01{
+        padding-bottom: 85px;
+    }
+
+    .history .sub-contents02{
+        height: 1070px;
+        background: url(../img/sub/contents_sub0104_bg01_m.jpg) no-repeat center center;
+        background-size: 100% 100%;
+    }
+
+    .history-contents-wrapper.mW14{
+        max-width: 100% !important;
+    }
+
+    /* 탭 리스트 */
+
+    .history .scroll-tab-list.left{
+        display: none;
+    }
+
+    .history .scroll-tab-list.mobile{
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin-left: 0px;
+    }
+
+    .history .scroll-tab-list.second{
+        margin-top: 88px;
+        /* margin-top: 44px; */
+    }
+
+    .history .scroll-tab-list ul{
+        position: unset;
+        top: unset;
+        left: unset;
+
+        max-width: 88.8%;
+
+        margin-right: auto;
+        margin-left: auto;
+
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .history .scroll-tab-list ul::after{
+        display: none;
+    }
+
+    .history .scroll-tab-list ul li{
+        width: calc(33% - 0px);
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .history .scroll-tab-list ul li a span{
+        font-size: 17px;
+        line-height: 32px;
+
+
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .history .scroll-tab-list ul li.active a::before{
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+
+    /* 연혁 리스트 - 콘텐츠 */
+
+    .history-contents-area{
+       position: relative;
+       left: unset;
+       top: unset;
+
+       margin-top: 94px;
+
+       margin-right: auto;
+       margin-left: auto;
+
+        max-width: 88.8%;
+    }
+
+    .hist-contents{
+        padding-top: 40px;
+        /* padding-top: 25px; */
+    }
+
+
+    .hist-tab-contents{
+        max-height: 720px;
+    }
+
+    .hist-yr{
+        font-size: 38px;
+        /* font-size: 35px; */
+    }
+
+    .hist-contents ul span{
+        font-size: 18px;
+        /* font-size: 15px; */
+    }
+
+
+
+
+
+
+    /* 경영이념 */
+    /* 20240111 수정 */
+
+    .philo .sub-message-tit{
+        display: none;
+    }
+
+    .philo .sub-message-tit.mobile{
+        display: block;
+    }
+
+    .philo .sub-message-desc{
+        display: none;
+    }
+
+    .philo .sub-message-desc.mobile{
+        display: block;
+    }
+
+    .philo .sub-message-slogan span.mobile{
+         display: block;
+         font-size: 20px;
+    }
+
+
+
+    .sub-message-slogan span{
+
+        display: none;
+    }
+
+    .philo .sub-message-wrapper .line{
+        margin: 40px auto 50px auto;
+    }
+
+
+
+    /* 20240111 수정 */
+
+
+    .philo-list-wrapper{
+        margin-top: 100px;
+        display: block;
+
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .philo-area{
+        margin-bottom: 50px;
+    }
+
+    .ph-ideal .ph-box{
+        width: 93px;
+       height: 93px;
+    }
+
+    .ph-vision .ph-box{
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .ph-value .ph-box{
+        width: 93px;
+        height: 93px;
+    }
+
+
+    .ph-ideal .ph-box span{
+        font-size: 19px;
+     }
+    .ph-vision .ph-box span{
+        font-size: 17px;
+     }
+    .ph-value .ph-box span{
+        font-size: 16px;
+     }
+
+
+     .ph-tit{
+        font-size: 16px;
+    }
+
+    .ph-value .ph-tit{
+        top: 2.5%;
+    }
+
+
+    .ph-value::after{
+        display: none;
+    }
+
+    .ph-action::after{
+       display: none;
+    }
+
+    .ph-value .ph-box-wrapper{
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       width: 100%;
+    }
+
+
+    .ph-value .ph-box-area{
+        position: relative;
+        width: 100%;
+    }
+
+    .ph-value .ph-box-area:not(:last-child){
+        margin-bottom: 50px;
+    }
+
+    .ph-box-box{
+        width: 100%;
+        position: relative;
+    }
+
+    .ph-box-box::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #1262ae;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+
+        z-index: 10;
+    }
+
+    .ph-box-box .ph-box{
+        z-index: 12;
+        position: relative;
+    }
+
+    .ph-desc-wrapper{
+       margin-top: 32px;
+       width: 66%;
+       /* width: 76%; */
+       margin-right: auto;
+       margin-left: auto;
+    }
+
+    .ph-slogan,
+    .ph-desc{
+        font-size: 16px;
+        /* font-size: 14px; */
+    }
+
+
+    .ph-desc-area{
+        margin-top: 35px;
+    }
+
+    .ph-desc-box{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        justify-content: space-around;
+        /* 모바일에서 해제 */
+    }
+
+    .ph-desc-box .ph-word-box{
+        width: 24%;
+    }
+
+    .ph-word{
+        font-size: 14px;
+        line-height: 100%;
+    }
+
+    .ph-desc{
+        width: 60%;
+        word-break: keep-all;
+    }
+
+    .ph-action .ph-box-area{
+        width: 34%;
+    }
+
+    .ph-action .ph-slogan{
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .ph-action .ph-box-wrapper{
+        width: 100%;
+        flex-wrap: nowrap;
+     }
+
+     .ph-action .ph-box-area.mobile{
+        display: block;
+
+    }
+
+    .ph-action{
+        display: none;
+    }
+
+    .ph-action.mobile{
+        display: block;
+    }
+
+    .ph-action.mobile .ph-box-wrapper{
+        position: relative;
+    }
+
+    .ph-action.mobile .ph-box-wrapper:not(:last-child){
+        margin-bottom: 40px;
+    }
+
+    .ph-action .ph-tit{
+        top: 40%;
+        left: 0;
+    }
+
+    .ph-action .ph-box-area.mobile .ph-box{
+        border: none;
+        background-color: transparent;
+    }
+
+
+    .ph-value .ph-desc{
+        min-height: unset;
+     }
+
+
+
+
+
+
+
+    /* 20240111 수정완료 */
+
+
+
+
+
+
+    /* btn-area */
+
+
+    .btn-area button span{
+        font-size: 12px;
+        padding-right: 18px;
+        text-align: center;
+    }
+
+    .btn-download span::after{
+        width: 10px;
+        height: 10px;
+        right: 12px;
+
+        display: none;
+    }
+
+
+
+    /* CI */
+
+    .ci .mW12{
+        max-width: 70%;
+    }
+
+    .ci .txt-con{
+        display: none;
+        width: 100%;
+        margin-top: unset;
+    }
+
+    .ci .con-tit{
+        font-size: 26px;
+        /* font-size: 24px; */
+    }
+
+    .ci .mW12{
+    }
+
+    .ci .sub-contents01 .normal-con.img-con{
+        margin-bottom: unset;
+    }
+
+    .ci .con-tit.mb45{
+        margin-bottom: 28px !important;
+    }
+
+    .ci .normal-con p{
+        width: calc(100% - 10px);
+    }
+
+    .ci .sub-contents01{
+        margin-bottom: 0px;
+    }
+
+    .ci .sub-contents01 .normal-con{
+        margin-bottom: 45px;
+    }
+
+
+    .ci .sub-contents01,
+    .ci .sub-contents02{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+
+    .ci .sub-contents02{
+    }
+
+    .ci .btn-area{
+        padding-top: 44px;
+        margin-bottom: 50px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ci .btn-area .btn-download{
+        display: block;
+
+        width: 44%;
+        /* width: 47%; */
+    }
+
+    .ci .btn-area .btn-download span{
+        text-align: left;
+
+        font-weight: 600;
+        font-size: 14px;
+
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        padding-right: unset;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .ci .btn-area .btn-download span::after{
+        content: '';
+        display: block;
+        background: url(../../assets/img/button/btn_download02_white.svg) no-repeat center center;
+        width: 14px;
+        height: 14px;
+        /* width: 12px;
+        height: 12px; */
+        background-size: 100% 100%;
+        right: 25px;
+    }
+
+    .ci .btn-area .btn-download:first-child{
+        margin-bottom: 12px;
+    }
+
+
+
+    .ci .img-con.left,
+    .ci .img-con.right{
+        float: none !important;
+        clear: both !important;
+    }
+
+    .ci .sub-contents03{
+        padding-top: 100px;
+    }
+
+    .ci .sub-contents03 img{
+        display: none;
+    }
+
+    .ci .sub-contents03 img.mobile{
+        display: block !important;
+    }
+
+    .sub-contents-area.ci{
+        padding-bottom: 30px;
+    }
+
+
+
+
+    /* 인재상 */
+
+    .hsin .sub-message-desc span{
+        width: 48%;
+        margin-right: auto;
+        margin-left: auto;
+        color: #555;
+    }
+
+
+    .hsin .bg-con{
+        padding-top: 85px;
+        padding-bottom: 190px;
+    }
+
+    .hsin-img.left,
+    .hsin-img.right,
+    .hsin-txt.left,
+    .hsin-txt.right{
+        float: none !important;
+        clear: both !important;
+
+        width: 100%;
+    }
+
+    .hsin-img{
+        max-width: 55%;
+        /* max-width: 48%; */
+    }
+
+    .hsin-txt{
+        max-width: 100%;
+        margin-top: 37.5px;
+    }
+
+
+    .hsin-area::after{
+        display: none;
+    }
+
+    .hsin-area{
+
+        width: 100%;
+
+        margin-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: unset;
+    }
+
+    .hsin02,
+    .hsin04{
+        flex-direction: column-reverse;
+    }
+
+    .hsin-txt span.eng,
+    .hsin-txt strong{
+        text-align: center;
+    }
+
+    .hsin-txt span.eng{
+        font-size: 17px;
+        /* font-size: 15px; */
+    }
+
+
+    .hsin-txt strong{
+        font-size: 24px;
+        margin: 15px 0px 25px 0px;
+    }
+
+    .hsin-txt .desc{
+        font-size: 17px;
+        width: 50%;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+
+    .hsin01 .eng{
+        margin-top: unset;
+    }
+    .hsin02 .eng{
+        margin-top: unset;
+    }
+    .hsin03 .eng,
+    .hsin04 .eng{
+        margin-top: unset;
+    }
+
+
+
+
+
+
+
+
+    /* 사업분야 */
+
+    .busi-tit{
+        font-size: 34px;
+        /* font-size: 24px; */
+        width: 100%;
+
+    }
+
+    .busi-info-area:not(:first-child){
+        margin-top: 60px;
+    }
+
+
+
+    .busi-desc{
+        color: #555;
+    }
+
+    .busi-desc.right{
+        float: none !important;
+        clear: both;
+        width: 100%;
+        padding-top: 40px;
+    }
+
+    .busi-desc span:not(:last-child){
+        margin-bottom: 30px;
+    }
+
+
+    .busi-info-qt-wrapper.right{
+        float: none !important;
+        clear: both !important;
+
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .busi-info-qt-wrapper:not(:first-child){
+        margin-top: 40px;
+    }
+
+    .busi-info-qt-wrapper .busi-info-qt:not(:first-child){
+        margin-top: 80px;
+    }
+
+    .busi-mat .busi-info-qt-wrapper .busi-info-qt:not(:first-child){
+/*        margin-top: 110px;*/
+    }
+
+    .busi-info-qt span{
+        font-size: 26px;
+    }
+
+    .busi-info-qt{
+        width: 100%;
+
+/*        height: 280px;*/
+    }
+
+    .busi-info-qt .busi-desc{
+        width: 85%;
+    }
+
+    .busi-chem .busi-info-qt img{
+        max-width: 75%;
+        margin-top:24px;
+    }
+    
+/*
+
+    .busi-mat .img-box .half-img-box{
+        min-height: unset;
+    }
+*/
+
+    .busi-info-qt .busi-desc{
+        min-height:70px;
+    }
+
+    .busi-info-qt img{
+        max-width: 45%;
+        max-height:204px;
+    }
+
+
+
+
+
+
+    .busi-info-wrapper .img-box{
+        margin-top: 100px;
+    }
+
+/*
+    .busi-car .busi-info-wrapper .img-box{
+       display: none;
+    }
+
+    .busi-mat .img-box .half-img-box img{
+        display: none;
+    }
+    
+    .busi-mat .img-box .half-img-box img.mobile{
+        display: block;
+    }
+
+    .busi-car .busi-info-wrapper .img-box.mobile{
+        display: block;
+
+    }
+    
+*/
+
+/*
+    .busi-mat .busi-info-wrapper .img-box{
+        margin-top: 150px;
+    }
+*/
+
+    .busi-mat .busi-info-qt span{
+        min-height:unset;
+    }
+
+
+    .busi-info-wrapper .img-box{
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: unset;
+    }
+
+    .img-box .half-img-box:first-child{
+        margin-right: unset;
+        margin-bottom: 1%;
+    }
+
+    .busi-info-wrapper .half-img-box{
+        width: 100%;
+    }
+
+    .busi-info-wrapper .img-box img{
+        width: 100%;
+    }
+
+/*
+    .busi-odm .sub-contents01 .img-box img{
+        display: none;
+    }
+    
+    .busi-odm .sub-contents01 .img-box img.mobile{
+        display: block;
+    }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+    /* 사업부문 - 계열사소개 */
+
+    .affil-area{
+        flex-direction: column;
+        padding-top: 90px;
+        /* padding-top: 60px; */
+        padding-bottom: 80px;
+    }
+
+    .affil-loca{
+        width: 100%;
+        font-size: 32px;
+        /* font-size: 24px; */
+    }
+
+    .affil-loca br{
+        display: none;
+    }
+
+    .affil-list{
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .affil-list li:first-child .affil{
+        /* padding-top: 10px; */
+        padding-top: 32px;
+        border-top: 1px solid #e9e9ea;
+    }
+
+    .affil-list .affil{
+        padding-bottom: 32px;
+
+        padding-top: 32px;
+    }
+
+    .affil-list .affil span{
+        font-size: 22px;
+        /* font-size: 18px; */
+
+        letter-spacing: -1px;
+    }
+
+    .affil-detail{
+        padding: 35px 0px 50px 0px;
+    }
+
+    .affil span::after{
+        background-size: 80% 80%;
+    }
+    .affil-list li.active .affil span::after{
+        background-size: 80% 80%;
+    }
+
+
+    .affil-detail .left,
+    .affil-detail .right{
+        width: 100%;
+        float: none !important;
+        clear: both !important;
+    }
+
+    .affil-ssum{
+        display: none;
+    }
+
+    .affil-ssum.mobile{
+        display: block;
+
+        border: 1px solid #d6d7da;
+        background-color: #fff;
+
+
+        padding-top: 65px;
+        padding-bottom: 65px;
+        /* padding-top: 32.5px;
+        padding-bottom: 32.5px; */
+    }
+
+    .affil-ssum-logo{
+        margin-right: auto;
+        margin-left: auto;
+        width: fit-content;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .affil-detail .left a{
+        margin-top: 12px;
+
+    }
+
+    .affil-detail .right{
+        margin-top: 60px;
+
+    }
+
+    .caption-type01{
+        color: #ee2e22;
+    }
+    .caption-type02{
+        color: #0b6eb2;
+    }
+
+    /* 사업분야 > 자동차 부품 */
+
+    .busi .img-box{
+    }
+
+    .busi-car-img-caption{
+        margin-bottom: 40px;
+
+    }
+
+    .busi .img-box img{
+        width: 100%;
+        display: block;
+    }
+
+    .busi .img-box img:not(:last-child){
+        margin-bottom: 12px;
+
+    }
+
+    .busi-car-img-caption span{
+        display: flex;
+        align-items: center;
+
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 160%;
+
+        position: relative;
+    }
+
+    .busi-car-img-caption span::before{
+        content: '';
+        display: block;
+        width: 8px;
+        height: 8px;
+
+
+        border-radius: 100%;
+        margin-right: 6px;
+    }
+
+    .caption-type01::before{
+        background-color: #ee2e22;
+    }
+    .caption-type02::before{
+        background-color: #0b6eb2;
+    }
+
+     /* 사업분야 > 종합무역 */
+
+     .busi-trade .img-box img{
+         display:none;
+     }
+
+    .busi-trade .img-box .mobile{
+         display:block;
+     }
+
+
+
+
+
+
+
+
+
+
+    /* 오시는길 */
+
+    .location .sub-tab.left{
+        width: 100%;
+    }
+
+    .sub-tab.depth01.left{
+        float: none !important;
+        clear: both !important;
+    }
+
+    .sub-tab.depth01.left ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .location .sub-tab.depth01 li{
+        margin-bottom: 6px;
+    }
+
+    .sub-tab.depth01.left ul li{
+        margin-right: 40px;
+        /* margin-right: 25px; */
+    }
+
+    .sub-tab.depth01 li a span{
+        font-size: 26px;
+        /* font-size: 20px; */
+    }
+
+
+
+    .sub-tab.depth02{
+        margin-bottom: 60px;
+    }
+
+
+    .sub-tab.depth02 ul{
+       justify-content: center;
+        width: calc(100% - 40px);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .sub-tab.depth02 ul::after{
+        display: none;
+    }
+
+    .sub-tab.depth02 ul li{
+        padding: 15px 35px;
+        /* padding: 15px 35px; */
+        border-radius: 24px;
+        /* border-radius: 17px; */
+    }
+
+    .sub-tab.depth02 ul li a span{
+        font-size: 17px;
+    }
+
+    .location .sub-contents.right{
+        float: none !important;
+        clear: both;
+        width: 100%;
+        margin-top: 65px;
+    }
+
+
+    /* 오시는길 > 해외 계열사 지도 이미지 */
+
+    .oversea-tab .sub-tab.depth02{
+        /* padding-bottom: 70%; */
+        padding-bottom: unset;
+        margin-bottom: 60px;
+    }
+
+    .oversea-map-img{
+
+        width: 100%;
+
+        position: relative;
+        top: unset;
+        left: unset;
+        transform: unset;
+
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /* 콘텐츠가 큰 리스트로 되어있을때 */
+
+    .list-contents{
+        width: 100%;
+    }
+
+    .list-contents li:first-child .list-tit{
+       border-top: 1px solid #e9e9ea;
+    }
+
+
+    .list-contents li:first-child .list-tit{
+        /* padding-top: 10px; */
+        padding-top: 32.5px;
+    }
+
+
+    .list-contents .list-tit{
+        padding-bottom: 32.5px;
+        padding-top: 32.5px;
+    }
+
+    .list-contents .list-tit span{
+        font-size: 22px;
+        /* font-size: 18px; */
+        letter-spacing: -1px;
+    }
+
+    .list-tit span::after{
+        background-position: center center;
+        height: 14px;
+        width: 18px;
+    }
+
+    .list-detail{
+        padding: 35px 0px 50px 0px;
+        /* padding: 30px 0px 44px 0px; */
+    }
+
+
+    .list-det:not(:first-child){
+        margin-top: 35px;
+    }
+
+    .map-wrapper .btn-map{
+        bottom: 0;
+        top: unset;
+        right: 0;
+        width: 100%;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .map-wrapper .btn-map a{
+        justify-content: center;
+        width: 100%;
+    }
+
+    .map-wrapper .btn-map span{
+        font-size: 14px;
+        /* font-size: 12px; */
+    }
+
+
+
+
+
+
+
+
+    /* 지속가능경영 */
+
+    .mW10{
+        max-width: calc(100% - 160px);
+    }
+
+
+    .manage .txt-con{
+        display: none;
+        width: 100%;
+        margin-top: unset;
+    }
+
+    .manage .con-tit{
+        font-size: 26px;
+        /* font-size: 24px; */
+    }
+
+
+    .manage .sub-contents01 .normal-con.img-con{
+        margin-bottom: unset;
+    }
+
+    .manage .con-tit.mb45{
+        margin-bottom: 28px !important;
+    }
+
+    .manage .normal-con p{
+        width: calc(100% - 10px);
+    }
+
+    .manage .sub-contents01{
+        margin-bottom: 0px;
+    }
+
+    .manage .sub-contents01 .normal-con,
+    .manage .sub-contents02 .normal-con{
+        margin-bottom: 45px;
+    }
+
+
+
+
+    .manage .sub-contents01,
+    .manage .sub-contents02{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+
+    .manage .img-con.left,
+    .manage .img-con.right{
+        float: none !important;
+        clear: both !important;
+
+
+    }
+
+    .manage .img-con img{
+        display: block;
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+    .manage .bg-con{
+        padding-top: 130px;
+        padding-bottom: 180px;
+    }
+
+
+    .manage .sub-contents03{
+        padding-top: 100px;
+    }
+
+    .ethic-circle-wrapper{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: unset;
+    }
+
+    .ethic-circle-area{
+        flex-direction: column;
+        position: relative;
+
+        margin-top: 120px;
+    }
+
+    .ethic-circle-area.left-circle{
+        margin-top: unset;
+    }
+
+    .ethic-circle-box{
+
+        padding-bottom: 30px;
+        flex-direction: column;
+
+        position: relative;
+    }
+
+
+    .ethic-circle-arrow{
+        display: none;
+    }
+
+    .ethic-circle-box::after{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -150px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 26px;
+        height: 122px;
+        background: url(../img/sub04/contents_sub040301_arrow_blue_rotate.png) center center;
+        background-size: 100% 100%;
+
+    }
+
+
+    .ethic-circle{
+        width: 100%;
+    }
+
+    .ethic-circle-half{
+        width: 85%;
+    }
+
+
+    .ethic-circle-txt{
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+        margin-top: unset;
+    }
+
+    .ethic-list .ethic-txt{
+        padding: 40px 0;
+        flex-direction: column;
+    }
+
+    .ethic-tit{
+        width: 100%;
+    }
+
+    .ethic-desc{
+        width: 100%;
+        margin-top: 42px;
+        /* margin-top: 30px; */
+    }
+
+    .ethic-tit strong{
+        font-size: 24px;
+        /* font-size: 20px; */
+    }
+
+    .ethic-desc span{
+        font-size: 19.2px;
+        /* font-size: 16px; */
+    }
+
+    .manage .bg-con{
+        padding-top: 100px;
+        padding-bottom: 160px;
+    }
+
+    /* 윤리헌장 */
+
+    .manage .sub-message-tit.mobile{
+        display: block;
+    }
+
+    .manage .sub-message-tit{
+        display: none;
+    }
+
+    .manage .sub-message-tit span{
+        display: inline-block;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+    }
+
+    .manage .sub-message-desc{
+        display: none;
+    }
+
+    .manage .sub-message-desc.mobile{
+        display: block;
+    }
+
+    .ethic-charter .ethic-txt:not(:last-child){
+        padding-bottom: 0px;
+    }
+
+    .ethic-charter .ethic-txt:first-child{
+        padding-top: 0px;
+    }
+
+    .ethic-charter .ethic-tit{
+        margin-bottom: unset;
+    }
+
+    .ethic-charter .ethic-desc{
+        margin-top: 42px;
+    }
+
+    .ethic-txt.ceo strong{
+        font-size: 16px;
+    }
+
+    .ethic-txt.ceo strong:first-child{
+        margin-right: 10px;
+    }
+
+    .ethic-txt.ceo strong span{
+        font-size: 24px;
+    }
+
+    .manage .btn-area{
+        justify-content: center;
+    }
+
+    .manage .btn-area button{
+        padding-right: 80px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    .manage .btn-download span::after{
+        transition: all 0.3s;
+
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16px;
+        width: 12px;
+        height: 12px;
+        background: url(../../assets/img/button/btn_download02_white.svg);
+    }
+
+
+
+    .list-det strong{
+        font-size: 18px;
+        /* font-size: 16px; */
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ul-list type */
+
+    .ul-list01{
+        margin-top: 20px;
+    }
+
+    .ul-list01>li{
+        font-size: 17px;
+        /* font-size: 15px; */
+    }
+
+    .ul-list02>li{
+        font-size: 15px;
+    }
+
+    .ul-list01 span,
+    .ul-list02 span{
+        font-size: 16px;
+    }
+
+    .ul-list03>li{
+        font-size: 14px;
+    }
+
+    .ul-list03 span{
+        font-size: 14px;
+    }
+
+
+
+
+
+
+
+    /* 20240124 나눔경영 추가 */
+
+    .mW1230{
+        max-width: calc(100% - 40px) !important;
+    }
+
+    .share .sub-message-desc.mobile{
+        display: none;
+    }
+
+    .share .sub-message-wrapper{
+        margin-bottom: 80px;
+    }
+
+    .normal-con-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: unset;
+        align-items: flex-start;
+
+        margin-bottom: 70px;
+        position: relative;
+    }
+
+    .sub-contents-slide-wrapper{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .sub-contents-slide-wrapper{
+        position: relative;
+/*        height: 410px;*/
+        width: 100%;
+    }
+
+    .sub-slide-option-wrapper{
+        max-width: 100%;
+    	width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .sub-contents-option-wrapper{
+    	position: relative;
+    	z-index: 900;
+
+        max-width: 288px;
+    	width: 100%;
+    	bottom: unset;
+        left: unset;
+
+        margin-bottom: 24px;
+    }
+
+    .share .normal-con{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .share .normal-con{
+        min-height: unset;
+    }
+
+    .share .normal-con .con-tit{
+        font-size: 24px;
+        /* font-size: 20px; */
+    }
+
+    .share .normal-con-txt p{
+        width: 100%;
+    }
+
+    .share-con02,
+    .share-con04{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 로딩 페이지 */
+
+
+.loading-page-wrapper{
+    max-width: 73%;
+
+}
+
+    .loading-page-wrapper img{
+        width:20%;
+    }
+
+.loading-page-wrapper p{
+    font-size: 18px;
+    margin-top:14px;
+}
+
+.loading-page-wrapper strong{
+    font-size: 34px;
+    margin-top:24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+@media only all and (max-width: 767px) {
+
+    .mW14,
+    .mW16{
+         max-width: calc(100% - 40px);
+    }
+
+
+    .mW10{
+        max-width: calc(100% - 40px);
+    }
+
+
+    /*  불릿 */
+
+    .bullet-type01{
+        font-size: 22px;
+        padding-left:12px;
+    }
+
+    .bullet-type01::before{
+        width:6px;
+        height:6px;
+    }
+
+
+
+
+    .sub-contents-area{
+        padding-top: 80px;
+    }
+
+
+    .sub-visual-bg img{
+        display: none;
+    }
+
+
+    .sub-visual-bg img.mobile{
+        display: block;
+        width: 100%;
+        min-width: unset;
+    }
+
+
+
+    .sub-visual-wrapper{
+        height: 470px;
+    }
+
+    .sub-menu-tit span{
+        font-size: 20px;
+    }
+
+    .sub-slogan-area span{
+        font-size: 30px;
+    }
+
+    .sub-slogan-area.long span{
+        font-size: 28px;
+        margin-bottom: 4px;
+    }
+
+    /* 3차 탭 */
+
+
+    .current-depth3-name{
+        padding: 12px;
+    }
+
+    .current-depth3-name span{
+        font-size: 14px;
+    }
+
+    .current-depth3-name img{
+        right: 12px;
+        width: 12px;
+    }
+
+
+    .current-depth3-name.active::after{
+        width: 12px;
+        height: 12px;
+    }
+
+    .depth3-btns-wrapper li a{
+        padding-bottom: 18px;
+        padding-top: 18px;
+        font-size: 14px;
+    }
+
+
+
+    /* Seciton2 : sub-contents normal-contents */
+
+    /* normal contents : 사진,글 배치 기본형 */
+
+
+    .sub-contents01{
+        /* padding-top: 65px; */
+    }
+
+    .group .sub-contents02{
+        padding-top: 62px;
+        padding-bottom: 63px;
+    }
+
+    .group .sub-contents03{
+        padding-bottom: 290px;
+        overflow: hidden;
+    }
+
+    .sub-contents03 .normal-con.center{
+        display: none;
+    }
+
+    .sub-contents03 .normal-con.mobile{
+        display: block;
+    }
+
+/*    그룹개요*/
+
+
+
+
+    .group .sub-message-tit{
+        display: none;
+    }
+
+    .group .sub-message-tit.mobile{
+        display: block;
+    }
+
+    .group .sub-message-desc{
+        display: none;
+    }
+
+    .group .sub-message-desc.mobile{
+        display: block;
+    }
+
+    .group .sub-contents01 img{
+        display: none;
+    }
+
+    .group .sub-contents01 img.mobile{
+        display: block;
+    }
+
+        .group-tit{
+    font-size: 20px;
+}
+    .group .sub-contents02 img{
+        display: none;
+    }
+     .group .sub-contents02 img.mobile{
+        display: block;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .normal-con.rightCenter{
+        padding: 11% 5.5% 11% 11%;
+        bottom: 30px;
+        left: 20px;
+    }
+
+
+    .normal-con .con-tit{
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+
+    .normal-con p{
+        font-size: 13px;
+    }
+
+
+    .bg-con-txt .left,
+    .bg-con-txt .right{
+        width: 100%;
+        float: none !important;
+        clear: both;
+    }
+
+    /* 인사말 */
+
+
+    .greeting .sub-contents01 .con-tit{
+        font-size: 20px;
+        margin-bottom: 33px;
+    }
+
+    .greeting .sub-contents01 .normal-con p{
+        width: 90%;
+        letter-spacing: -1px;
+    }
+
+    .greeting .sub-contents01 .right{
+        margin-top: 50px;
+    }
+
+    .greeting .sub-contents01 .con-tit br:first-child{
+        display: block;
+    }
+
+    .greeting .normal-con img{
+         width:100%;
+        margin-right:auto;
+        margin-left:auto;
+        /*height: 240px;*/
+    }
+
+    .greeting .normal-con img.ceo-img.mobile{
+        display: block !important;
+    }
+    
+    .greeting .normal-con img.ceo-img{
+        display: none;
+    }
+
+    .greeting .bg-con{
+    }
+
+    .greeting .bg-con .mW14{
+       max-width: calc(100% - 20px) !important;
+    }
+
+    .greeting .bg-con p.left{
+        margin-bottom: 25px;
+    }
+
+/*
+    2024 03 추가 수정요청
+    .greeting .ceo-sign{
+        display: none;
+    }
+    
+*/
+    
+    .ceo-sign{
+        margin-top: 80px;
+        flex-direction: column;
+    }
+    
+    
+    
+    
+
+  /* 경영이념 */
+
+    .philo-box img{
+        width: 100%;
+        height: 232px;
+     }
+
+    .sub-contents-wrapper{
+    }
+
+    .sub-message-slogan span{
+        font-size: 17px;
+    }
+
+    .philo .sub-message-wrapper .line{
+        margin: 40px auto 50px auto;
+    }
+
+    .philo-list-wrapper.mobile{
+        width: 100%;
+    }
+
+    .philo-tit{
+        padding-top: 25px;
+        padding-bottom: 50px;
+
+    }
+
+    .philo-tit span{
+        font-size: 15px;
+        margin-bottom: 4px;
+    }
+
+    .philo-tit .line{
+        width: 12px;
+    }
+
+
+        /* 20240111 수정 */
+
+        .ph-desc-wrapper{
+            width: 76%;
+        }
+
+        .ph-slogan,
+        .ph-desc{
+             font-size: 14px;
+
+        }
+
+        .ph-desc-box{
+            justify-content: space-between;
+        }
+
+        .ph-value .ph-tit{
+            top: 3.5%;
+        }
+
+         /* 20240111 수정완료 */
+
+
+
+
+    /* 연혁 */
+
+    .sub-message-tit span{
+        font-size: 24px;
+    }
+
+    .sub-message-desc span{
+        font-size: 17px;
+    }
+
+    .history .scroll-tab-list.second{
+        margin-top: 64px;
+    }
+
+    .history .scroll-tab-list ul li a span{
+        line-height: 188%;
+        padding-top: 15px;
+        font-size: 14px;
+    }
+
+    @keyframes history-tab-txt{
+
+        0%{
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        100%{
+
+            font-size: 17px;
+            color: #fff;
+
+        }
+
+    }
+
+    .history-contents-area{
+        margin-top: 85px;
+    }
+
+    .hist-contents{
+        padding-top: 25px;
+    }
+
+    .hist-yr{
+        font-size: 35px;
+    }
+
+    .hist-contents ul span{
+        font-size: 14px;
+    }
+
+
+    .hist-tab-contents::-webkit-scrollbar{
+        width: 4px;
+    }
+
+
+
+
+
+    /* CI */
+
+    .ci .mW12{
+        max-width: calc(100% - 80px);
+    }
+
+    .ci .con-tit{
+        font-size: 24px;
+    }
+
+    .ci .normal-con p{
+        line-height: 155%;
+        color: #555;
+    }
+
+    .ci .btn-area .btn-download{
+        width: 170px;
+    }
+
+    .ci .btn-area .btn-download span{
+        padding-left: 24px;
+    }
+
+    .ci .btn-area .btn-download span::after{
+        width: 12px;
+        height: 12px;
+        right: 24px;
+    }
+
+    .sub-contents-area.ci{
+        padding-bottom: 15px;
+    }
+
+
+
+
+
+    /* 인재상 */
+
+    .hsin .mW09{
+        max-width: calc(100% - 80px) !important;
+    }
+
+    .hsin .bg-con{
+        padding-top: 85px;
+        padding-bottom: 140px;
+    }
+
+    .hsin .sub-message-desc span{
+        width: 90%;
+        font-size: 17px;
+        letter-spacing: -1px;
+    }
+
+    .hsin-img{
+        max-width: 65%;
+    }
+
+    .hsin-txt span.eng{
+        font-size: 15px;
+    }
+
+    .hsin-txt .desc{
+
+        width: 80%;
+    }
+
+
+
+
+
+
+
+
+
+    /* 사업분야 */
+
+    .busi-tit{
+        font-size: 24px;
+    }
+
+    .busi-desc{
+        color: #555;
+    }
+
+    .busi-info-wrapper .img-box{
+        margin-top: 140px;
+    }
+
+    .busi-info-area{
+
+        width: calc(100% - 40px);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .busi-car-img-caption{
+
+       width: calc(100% - 40px);
+       margin-right: auto;
+       margin-left: auto;
+    }
+
+
+
+    .busi-mat .busi-info-wrapper .img-box{
+        /* margin-top: 50px; */
+    }
+
+    .busi-info-area:not(:first-child){
+        margin-top: 60px;
+    }
+
+    .busi-desc.right{
+        padding-top: 40px;
+    }
+
+    .busi-chem .busi-info-area:not(:first-child){
+        margin-top: 80px;
+    }
+
+    .busi-info-qt span{
+        font-size: 20px;
+    }
+
+    .busi-info-qt .busi-desc{
+        font-size: 16px;
+    }
+
+    .busi-info-qt{
+        width: 100%;
+
+/*        height: 240px;*/
+    }
+
+    .busi-mat .busi-info-qt img{
+        max-width: 100%;
+        max-height: unset;
+    }
+
+
+    .busi-info-qt-wrapper .busi-info-qt:not(:first-child){
+        margin-top: 80px;
+    }
+
+    
+/*    20240130 추가수정요청 */
+    
+    
+      .busi-info-qt img{
+        max-width: 100%;
+        max-height:unset;
+    }
+    
+    .busi-info-qt .busi-desc{
+        width: 100%;
+        min-height:unset;
+        margin-bottom:20px;
+    }
+    
+    .busi-info-area.type02 .busi-info-qt-wrapper:nth-child(3),
+    .busi-info-area.type02 .busi-info-qt-wrapper:nth-child(4),
+    .busi-info-area.type02 .busi-info-qt-wrapper:nth-child(5){
+        margin-top:80px;
+    }
+    
+    .busi-info-area.type02{
+        margin-top: 80px;
+    }
+    
+    .busi-info-qt-wrapper.type02{
+        margin-top: 80px;
+    }
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* 사업부문 - 계열사소개 */
+
+    .affil-area{
+        padding-top: 60px;
+    }
+
+    .affil-loca{
+        font-size: 24px;
+    }
+
+    .affil-list .affil span{
+        font-size: 18px;
+    }
+
+    .affil-ssum.mobile{
+        padding-top: 32.5px;
+        padding-bottom: 32.5px;
+    }
+
+    .affil-ssum-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .affil-ssum-logo img{
+        width: 85%;
+    }
+
+    .affil-detail .left a{
+        margin-top: 10px;
+        line-height: 32px;
+    }
+
+    .affil-detail .right{
+        margin-top: 44px;
+    }
+
+
+
+    /* 사업분야 > 자동차 부품 */
+
+    .busi-car-img-caption{
+        margin-bottom: 22px;
+    }
+
+    .busi .img-box img:not(:last-child){
+        margin-bottom: 6px;
+    }
+
+    .busi-car-img-caption span{
+        font-size: 14px;
+    }
+
+    .busi-car-img-caption span::before{
+        width: 6px;
+        height: 6px;
+    }
+
+    /* 사업분야 > 종합무역 */
+
+    .busi-trade .busi-info-wrapper .img-box.mobile{
+
+        margin-top: 75px;
+     }
+
+
+
+
+    /* table-type01 : 계열사 소개 페이지 테이블 */
+
+
+    .table-type01 th{
+        width: 25%;
+        word-break: keep-all;
+    }
+
+    .table-type01 th br.mobile{
+    display:block;
+}
+
+    .table-type01 tr,
+    .table-type01 th,
+    .table-type01 td{
+        font-size: 14px;
+        vertical-align: top;
+    }
+
+    .table-type01.type02 th{
+
+    }
+
+
+    /* 오시는길 */
+
+    .sub-tab.depth01.left ul li{
+
+        margin-right: 25px;
+    }
+
+    .sub-tab.depth01 li a span{
+
+        font-size: 20px;
+    }
+
+    .sub-tab.depth02 ul li{
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+
+        padding-left: unset;
+        padding-right: unset;
+
+        border-radius: 17px;
+
+        width: calc(25%);
+    }
+
+    .sub-tab.depth02 ul li a span{
+        font-size: 14px;
+    }
+
+    .location .sub-contents.right{
+        margin-top: 50px;
+    }
+
+
+
+
+        /* 콘텐츠가 큰 리스트로 되어있을때 */
+
+        .list-contents .list-tit span{
+            font-size: 18px;
+        }
+        .list-tit span::after{
+            background-position: center center;
+            background-size: 100% 100%;
+            width: 12px;
+        }
+
+        .list-contents li.active .list-tit span::after{
+            background-size: 100% 100%;
+        }
+
+        .list-detail{
+            padding: 30px 0px 44px 0px;
+        }
+
+        .map-wrapper .btn-map span{
+            font-size: 12px;
+        }
+
+        .map-wrapper .map-area{
+        }
+
+
+
+
+
+
+
+
+
+    /* 지속가능경영 */
+
+    .manage .sub-contents-box.pt80{
+        padding-top: 60px !important;
+    }
+
+    .manage .mW14{
+        max-width: calc(100% - 80px) !important;
+    }
+
+    .manage .con-tit.mb45{
+        margin-bottom: 35px !important;
+    }
+
+    .manage .con-tit{
+        font-size: 24px;
+    }
+
+    .manage .normal-con p{
+        line-height: 155%;
+        color: #555;
+    }
+
+
+    .sub-contents-area.manage{
+        padding-bottom: 15px;
+    }
+
+    .manage .sub-contents03{
+        padding-top: 85px;
+    }
+
+
+    .manage .sub-contents02 .img-con{
+        margin-bottom: unset;
+    }
+
+
+
+    .manage .con-tit{
+        width: 100%;
+        word-break: keep-all;
+    }
+
+    .manage .img-con img{
+        width: 100%;
+    }
+
+
+    .manage .bg-con{
+        padding-top: 75px;
+        padding-bottom: 140px;
+    }
+
+    .ethic-circle{
+        width: 85%;
+    }
+
+    .ethic-circle-half{
+        width: 100%;
+    }
+
+    .ethic-circle-box::after{
+        bottom: -135px;
+
+        width: 23px;
+        height: 118px;
+    }
+
+    .ethic-contents-area:first-child{
+        padding-bottom: 65px;
+    }
+
+    .ethic-desc{
+        margin-top: 30px;
+    }
+
+    .ethic-tit strong{
+        font-size: 20px;
+    }
+
+    .ethic-desc span{
+        font-size: 16px;
+        width: 95%;
+        display: block;
+        word-break: keep-all;
+    }
+
+    /* 윤리헌장 */
+
+    .manage .sub-message-tit span{
+        letter-spacing: -1px;
+    }
+
+    .manage .sub-message-desc span{
+        width: 100%;
+    }
+
+    .ethic-charter .ethic-txt{
+        padding: 40px 0;
+    }
+
+    .ethic-charter .ethic-desc{
+        margin-top: 22px;
+
+    }
+
+    .ethic-charter .ethic-desc span{
+        margin-right: auto;
+        margin-left: auto;
+        width: 90%;
+        word-break: keep-all;
+
+    }
+
+    .ethic-txt.ceo{
+        margin-top: 24px;
+    }
+
+    .ethic-txt.ceo strong{
+        font-size: 14px;
+    }
+
+    .ethic-txt.ceo strong:first-child{
+        margin-right: 8px;
+    }
+
+    .ethic-txt.ceo strong span{
+        font-size: 22px;
+    }
+
+    .manage .btn-area button{
+        padding-right: 90px;
+    }
+
+    .manage .btn-download span::after{
+        right: 20px;
+    }
+
+    .manage .list-detail{
+        padding: 30px 0px 38px 0px;
+    }
+
+
+
+
+
+    /* ul-list type */
+
+    .ul-list01>li{
+        font-size: 15px;
+        letter-spacing: -1px;
+        word-break: keep-all;
+    }
+
+
+
+
+
+
+
+
+
+    /* 나눔경영 20240124 추가 */
+
+    .share .sub-message-desc span{
+        width: 93%;
+        word-break: keep-all;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .sub-contents-slide-wrapper{
+/*        height: 210px;*/
+    }
+
+    .share .txt-con{
+        margin-top: 20px;
+    }
+
+    .sub-contents-option-wrapper{
+    	max-width: 144px;
+    }
+
+    .sub-contents-pagination-area .swiper-pagination{
+        line-height: 14px;
+        font-size: 17px;
+    }
+
+    .share .normal-con .con-tit{
+         font-size: 20px;
+
+    }
+    
+    
+    .share-busi-tit{
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+    
+    
+
+/*
+    .sub-contents-slide-area .swiper-slide img{
+        height: 210px;
+    }
+*/
+    .share .normal-con p{
+        font-size: 15px;
+    }
+
+    .sub-contents-option-wrapper{
+        margin-bottom: 20px;
+    }
+
+    .share .normal-con{
+        min-height: unset;
+    }
+    .share .normal-con-txt{
+       padding-bottom: 0px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.privacy dl,
+.terms dl{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.privacy dt,
+.terms dt{
+    font-size:1rem;
+}
+
+
+.privacy dd,
+.terms dd{
+    font-size:0.85rem;
+}
+
+.privacy dd.pt20,
+.terms dd.pt20{
+    padding-top: 10px !important;
+}
+
+
+
+
+
+
+    /* 로딩 페이지 2024 신규추가 */
+
+
+    .loading-page-wrapper{
+        padding-bottom: 60px;
+    }
+
+
+    .loading-page-wrapper img{
+        width:30%;
+    }
+
+.loading-page-wrapper p{
+    font-size: 14px;
+    margin-top:12px;
+    letter-spacing: -1px;
+    word-break: keep-all;
+}
+
+.loading-page-wrapper strong{
+    font-size: 26px;
+    margin-top:18px;
+}
+
+
+
+
+
+/* table-type01 : 해외법인 소개 페이지 테이블 - 2024신규추가 */
+
+
+.table-type01.affil-ab tr{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.table-type01.affil-ab th{
+    width:100%;
+    padding-right: 0px;
+
+}
+.table-type01.affil-ab td{
+    width: 100%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+@media only all and (max-width: 359px) {}
+
+
+
+

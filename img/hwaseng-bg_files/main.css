@@ -1,0 +1,762 @@
+@charset "UTF-8";
+@import url("main_pc.css");
+
+
+
+@media only all and (max-width: 1023px){
+
+	/* main-visual-wrapper : video */
+
+	.main-visual-wrapper {
+	    height: 540px;
+		z-index: initial;
+	}
+
+	.main-visual-wrapper video {
+		left: 0;
+		margin-left: -70%;
+	}
+
+	.main-slogan-wrapper{
+	    top: 196px;
+	    left: 20px;
+	    width: 100%;
+	    margin-left: unset;
+	}
+
+	.main-slogan-wrapper > p span{
+	    font-size: 30px;
+	    line-height: 37px;
+	}
+
+
+	.main-visual-wrapper .line {
+		bottom: 6px;
+		left: 95px;
+		display: block;
+	}
+
+
+	@keyframes main-slogan-wrapper-line {
+	    0% {
+			width: 0;
+			height: 0;
+	        opacity: 0;
+		}
+	    100% {
+			width: calc(100% - 92px);
+			height: 1px;
+	        opacity: 1
+	    }
+	}
+
+	/* btn-bottom */
+
+
+	.btn-bottom {
+		bottom: -33px;
+    	right: unset;
+		left:50px;
+	}
+
+	.btn-bottom img{
+		width: 8px;
+		height: 8px;
+	}
+
+	.btn-bottom span{
+	    font-size: 13px;
+	   line-height: 16px;
+	    margin-right: 6px;
+	}
+
+
+	.btn-hstory{
+		position: relative;
+		top: 46px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		border: 1px solid #b3b4b4;
+		border-radius: 35px;
+		padding: 10px 26px;
+	}
+
+
+	/* H STORY */
+
+	.main-story-area{
+		max-width: calc(100% - 40px);
+
+		padding-top: 78px;
+		padding-bottom: 90px;
+
+	}
+
+	.main-story-box{
+		padding: 0px 0px 0px 0px;
+	}
+
+	.main-story-box .story-title{
+		font-size: 30px;
+		line-height: 38px;
+	}
+
+	.main-story-box .story-subtit{
+
+		font-size: 16px;
+		line-height: 20px;
+
+		margin-top: 29px;
+	}
+
+	.main-story-box .story-txt{
+
+		font-size: 13px;
+		line-height: 20px;
+
+		margin-top: 29px;
+	}
+
+
+		/* BUSINESS */
+	/* 20240117 수정 */
+
+
+	.main-business-area{
+		max-width: calc(100% - 80px);
+		padding-top: 86px;
+		padding-bottom: 78px;
+
+	}
+
+	.business-contents{
+		margin-top: 35px;
+	}
+
+	.main-business-wrapper  ul{
+		height: unset;
+		flex-wrap: wrap;
+	}
+
+	.main-business-wrapper  li {
+		width:50%;
+	}
+
+	.main-business-wrapper  li a .tit {
+
+		font-size: 18px; 
+		/* font-size: 15px;  */
+		
+	}
+
+	.main-business-wrapper  li a .tit span {
+		bottom:18px; 
+		/* bottom:17px;  */
+	}
+
+	.main-business-wrapper  li a .bg_box{
+		height:320px;
+	}
+
+	.main-business-wrapper  li a .txt_box{
+		display: none;
+	}
+
+	.main-business-wrapper  ul:hover li.on a .tit span {
+		opacity:1;
+	}
+
+	.main-business-wrapper  ul:hover li.on { 
+		width:50%;
+	}
+	
+
+
+
+
+	/* ///////20240117 수정 */
+
+
+	/* section-slogan-wrapper(section3,section4 공통) */
+
+
+	.section-slogan-wrapper > p{
+		display: none;
+	}
+
+	.section-slogan-wrapper > p.mobile{
+		display: block;
+		position: relative;
+	}
+
+	.section-slogan-wrapper .section-subtit span{
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.section-slogan-wrapper .section-subtit .line{
+		width: 65px;
+		left: 90px;
+		animation: section-slogan-wrapper-line 0.625s linear 0s forwards;
+	}
+
+	@keyframes section-slogan-wrapper-line {
+	    0% {
+			width: 0;
+			height: 0;
+	        opacity: 0;
+		}
+	    100% {
+			width: 65px;
+			height: 1px;
+	        opacity: 1;
+	    }
+	}
+
+	.section-slogan-wrapper p{
+		margin-top: 23.5px;
+	}
+
+	.section-slogan-wrapper p span{
+		font-size: 24px;
+		line-height: 37.5px;
+
+	}
+
+
+	/* ESG 경영 */
+    
+/*    202401 수정*/
+    .main-manage-wrapper{
+        padding-bottom: 100px;
+    }
+
+	.main-manage-area{
+		max-width: calc(100% - 80px);
+		margin: 0px auto 60px auto;
+
+	}
+
+
+	.main-manage-area .section-subtit .line{
+		left: 54px;
+	}
+
+	/* ESG 경영 스와이퍼 */
+
+	.main-manage-slide-wrapper{
+		height: auto;
+	}
+
+
+	.main-manage-slide-area {
+		position: relative;
+
+		top: unset;
+		left: unset;
+		width: calc(100% - 80px);
+		margin: 0 auto;
+
+		/*
+		padding: 0 40px;
+		*/
+	}
+
+
+	.main-manage-option-wrapper{
+		max-width: calc(100% - 15px);
+	}
+
+	.main-manage-option-wrapper .btn-manage-prev,
+	.main-manage-option-wrapper .btn-manage-next{
+		width: 10%;
+		height: 0;
+
+		padding-bottom: 10%;
+
+		display: block;
+		border-radius: 100%;
+
+		position: relative;
+	}
+
+	.main-manage-option-wrapper button a{
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+
+	.main-manage-option-wrapper .btn-manage-prev{
+		background-size: 20%;
+	}
+
+	.main-manage-option-wrapper .btn-manage-next{
+		background-size: 20%;
+	}
+
+
+
+	.main-manage-pagination-area{
+
+		width: 80%;
+		margin: 20px auto;
+	}
+
+	.main-manage-pagination-area .swiper-pagination{
+		display: flex;
+	    height: 100%;
+		justify-content: center;
+	}
+
+	.main-manage-pagination-area .swiper-pagination-bullet {
+	    width: 5px;
+	    height: 5px;
+	}
+
+	.main-manage-pagination-area .swiper-pagination-bullet-active::before{
+		width: 15px;
+		height: 15px;
+		border: 1px solid #545454;
+
+	}
+
+
+	.main-manage-pagination-area button{
+		width: 5%;
+
+		position: unset !important;
+		display: block;
+	}
+
+
+	.main-manage-slide-area .swiper-slide {
+		overflow: inherit;
+		width: calc(100% - 400px);
+		/* width: 280px; */
+	}
+
+
+	.main-manage-slide-area .swiper-slide a {
+
+		width: 80%;
+		height: 65.5%;
+		overflow: inherit;
+
+	}
+
+
+	.main-manage-slide-area .swiper-slide img{
+		width: 100%;
+		height: 100%;
+	}
+
+
+	.main-manage-slide-area .swiper-slide-active {
+	    margin-top: -0px;
+	}
+
+
+	/* 중간에 오는 슬라이드에 달리는 네임택 CSS  */
+
+	.main-manage-slide-area .swiper-slide .managetag{
+		display: block;
+	}
+
+
+	.main-manage-slide-area .swiper-slide .managetag{
+		right: -11px;
+
+		width: 22%;
+		height: 35.6%;
+
+		padding: 13px 11px;
+	}
+
+
+	.main-manage-slide-area .swiper-slide .managetag-area{
+		width: 100%;
+		height: 100%;
+	}
+
+
+	.main-manage-slide-area .swiper-slide .managetag span img{
+		width: 8%;
+		height: 8%;
+		margin-left: calc(92%);
+	}
+
+	.main-manage-slide-area .swiper-slide .managetag span.mtag{
+		font-size: 18px;
+		line-height: 100%;
+
+		margin-top: 33%;
+	}
+
+
+	/* PR ROOM */
+
+
+	.main-pr-wrapper{
+		padding-top: 75px;
+		padding-bottom: 80px;
+	}
+
+	.main-pr-area{
+		max-width: calc(100% - 80px);
+		overflow: hidden;
+	}
+
+	.main-pr-area .section-subtit .line{
+		left: 26px;
+	}
+
+	/* pr contents */
+
+	.main-prContents-wrapper.mobile{
+		display: block;
+
+		float: none;
+		margin-top: 35px;
+
+		width: 100%;
+		height: auto !important;
+
+		position: relative;
+	}
+
+
+	.main-prContents-wrapper{
+		display: none;
+	}
+
+	.main-pr-contents{
+		float: unset;
+		position: relative;
+		height: auto;
+	}
+
+	.main-pr-contents-top{
+		position: relative;
+		height: auto;
+		margin-bottom: 15px;
+        
+        display: flex;
+        justify-content: space-between;
+	}
+
+	.main-pr-contents>div{
+		overflow: hidden;
+		position: relative;
+		height: auto;
+	}
+    
+    .pr-contents01,
+    .pr-contents02{
+        width: calc(49%);
+    }
+
+/*
+	.pr-contents01{
+		float: left;
+		width:
+	}
+
+	.pr-contents02{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: calc(52% - 5px);
+		height: 100%;
+	}
+*/
+
+	.main-pr{
+		height: fit-content;
+	}
+
+
+	.main-pr a{
+		position: relative;
+		top: 0;
+		left: 0;
+
+		height: auto !important;
+	}
+
+	.main-pr.hori {
+		position: absolute;
+		left: 0;
+		height: calc(50% - 5px);
+	}
+
+	.main-pr.hori:first-child{top: 0;}
+	.main-pr.hori:last-child{bottom: 0;}
+
+
+	.pr-contents03{
+		width: 100%;
+		height: 0;
+		padding-bottom: 50%;
+	}
+
+	.pr-contents03 img{
+	}
+
+
+	.main-pr-contents:not(:last-child){
+		margin-right: 0px;
+	}
+
+	.main-pr.hori  > a {
+		display: block;
+		height: 100% !important;
+	}
+
+
+	.main-pr.hori img{
+		position: absolute;
+		top: -100%;
+		left: -100%;
+		right: -100%;
+		bottom: -100%;
+		display: block;
+		min-width: 120%;
+		max-width: 120%;
+		margin: auto;
+	}
+
+
+
+	.main-pr span{
+		font-size: 22px;
+		line-height: 26px;
+		left: 20px;
+		top: 18.5px;
+	}
+
+	.movie-wrapper {
+		height: 540px;
+	}
+
+	.movie-wrapper > iframe,
+	.movie-wrapper > .youtube {
+		top: -52px;
+		left: 50%;
+		margin-left: -512px;
+		width: 1024px;
+		height: 624px;
+	}
+
+}
+
+
+@media only all and (max-width: 767px) {
+
+	/* main-visual-wrapper : video */
+
+
+	/* btn-bottom */
+
+
+	/* H STORY */
+    
+    .main-story-wrapper{
+    padding-bottom:44px;
+}
+
+    
+    
+    
+    /* PR ROOM */
+    
+    .section-slogan-wrapper p span{
+		font-size: 22px;
+		line-height: 156%;
+        letter-spacing: -1px;
+	}
+
+
+	/* BUSINESS */
+	/* 20240117 수정 */
+
+
+	.main-business-area{
+		max-width: calc(100% - 40px);
+	}
+
+	.business-contents{
+		margin-top: 160px;
+	}
+
+	.main-business-wrapper  li a .tit {
+		font-size: 15px; 
+	}
+
+	.main-business-wrapper  li a .bg_box{
+		height:210px;
+		background-position: 0 center;
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+	}
+
+
+	/* section-slogan-wrapper(section3,section4 공통) */
+
+
+	.main-business-area>.section-slogan-wrapper{
+		float: left;
+	}
+
+	.section-slogan-wrapper{
+		position: relative;
+	}
+
+	.section-slogan-wrapper > p{
+		display: none;
+	}
+
+	.section-slogan-wrapper > p.mobile{
+		display: block;
+		position: relative;
+	}
+
+	.section-slogan-wrapper .section-subtit span{
+		font-size: 12px;
+		line-height: 15.14px;
+	}
+
+	.section-slogan-wrapper .section-subtit .line{
+		left: 42px;
+	}
+
+	.section-slogan-wrapper p{
+		animation: section-slogan-wrapper 0.5s linear 0s forwards;
+	}
+
+
+	/* ESG 경영 */
+
+
+	.main-manage-area{
+		max-width: calc(100% - 40px);
+	}
+
+
+	.main-manage-area .section-subtit .line{
+		left: 46px;
+	}
+
+	/* ESG 경영 스와이퍼 */
+
+
+	.main-manage-option-wrapper .btn-manage-prev{
+		background: #fff url(../img/main/button_arrow_left.png) center center no-repeat;
+		background-size: 25%;
+	}
+
+	.main-manage-option-wrapper .btn-manage-next{
+		background: #fff url(../img/main/button_arrow_right.png) center center no-repeat;
+		background-size: 25%;
+	}
+
+
+	.main-manage-pagination-area{
+		justify-content: center;
+		align-items: center;
+	}
+
+
+	.main-manage-slide-area .swiper-slide {
+
+		width: calc(100% - 80px);
+
+		/* width: 280px; */
+	}
+
+
+	.main-manage-slide-area .swiper-slide a {
+		width: 100%;
+	}
+
+
+	.main-manage-slide-area .swiper-slide {
+	    transition: all 0.2s ease;
+		position: relative;
+	}
+
+
+	/* 중간에 오는 슬라이드에 달리는 네임택 CSS  */
+
+
+	.main-manage-slide-area .swiper-slide .managetag{
+		width: 90px;
+		height: 90px;
+	}
+
+
+	.main-manage-slide-area .swiper-slide .managetag span img{
+		width: 8px;
+		height: 8px;
+		overflow: hidden;
+		margin-left: calc(100% - 8px);
+	}
+
+	.main-manage-slide-area .swiper-slide .managetag span.mtag{
+		font-size: 15px;
+		line-height: 19px;
+		margin-top: 18px;
+	}
+
+
+	/* PR ROOM */
+
+
+	.main-pr-area{
+		max-width: calc(100% - 40px);
+	}
+
+	.main-pr-area .section-subtit .line{
+		left: 26px;
+	}
+
+	/* pr contents */
+
+
+
+	.main-pr.hori {
+		width: 100%;
+	}
+
+
+.main-pr img{
+	overflow: hidden;
+}
+
+
+.main-pr span{
+
+	font-size: 14px;
+
+	line-height: 18px;
+	left: 20px;
+	top: 18.5px;
+
+}
+
+}
+
+
+
+@media only all and (max-width: 567px) {
+
+}
+
+@media only all and (max-width: 360px) {
+
+
+}

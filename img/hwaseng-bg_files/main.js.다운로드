@@ -1,0 +1,94 @@
+$(function(){
+
+
+
+
+    //main.js
+    //ESG경영 slider swiper script
+    $(function() {
+        var mainVisualSlider01 = new Swiper('#main-manage-slider', {
+            loop: false,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            // slidesPerView: 3,
+            // spaceBetween: 150,
+            centeredSlides: true,
+            pagination: {
+                el: '#main-manage-pagination',
+                clickable: true,
+            },
+            //Navigation arrows
+            navigation: {
+                nextEl: '.btn-manage-next',
+                prevEl: '.btn-manage-prev',
+            },
+            breakpoints: {
+                359:{
+                    slidesPerView: 1,  //브라우저가 359보다 클 때
+                    spaceBetween: 150,
+                },
+                1023: {
+                    slidesPerView: 4,  //브라우저가 1024보다 클 때
+                    spaceBetween: 0,
+                },
+            },
+        });
+        
+        
+        $("#manage-button-pause").show();
+        $("#manage-button-play").hide();
+        $('#manage-button-pause').on('click',function(){
+            mainVisualSlider01.autoplay.stop();
+            
+            $("#manage-button-pause").hide();
+            $("#manage-button-play").show();
+        });
+        $("#manage-button-play").on('click',function(){
+            mainVisualSlider01.autoplay.start();
+            
+            $("#manage-button-pause").show();
+            $("#manage-button-play").hide();
+        });
+    });
+    
+    
+    
+    
+    $(function(){
+		$('.main-business-area li').mouseenter(function(e) {
+			$(this).addClass('on');
+		});
+		$('.main-business-area li').mouseleave(function(e) {
+			$(this).removeClass('on');
+		});
+	});
+    
+    
+    
+    
+     $(window).scroll(function(){
+        //header mask
+        let scrW = $(window).scrollTop();
+        let scrS2 = $('#section2').offset().top; 
+        let scrS3 = $('#section3').offset().top;
+        let scrS4 = $('#section4').offset().top; 
+        let scrS5 = $('#section4').offset().top; 
+        if(scrW < scrS2){
+            //header 그대로
+            $('header').removeClass('mask');
+        } else{
+            $('header').addClass('mask');
+        }
+
+    });
+    
+    
+
+
+
+
+    
+
+});

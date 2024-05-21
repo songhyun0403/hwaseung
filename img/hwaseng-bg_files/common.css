@@ -1,0 +1,703 @@
+@charset "UTF-8";
+@import url("common_pc.css");
+
+
+
+@media only all and (max-width: 1023px) {
+
+/* header MASK */
+
+header.mask .header-area .logo{
+    width: 120px;
+     height: 17px;
+}
+
+
+header.mask button.btn-mtotalmenu span{
+    animation-duration: 0.3s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-name: headerMenuBtn-Mask;
+ }
+
+
+    /* HEADER */
+
+    .header-box{
+         padding: 19px 20px;
+         display: flex;
+         align-items: center;
+    }
+
+    header .header-box .top-menu-wrapper,
+    header .header-wrapper .top-submenu-wrapper{
+        display: none;
+    }
+
+    .header-area .logo{
+        width: 120px;
+        height: 17px;
+        background-size: 100% 100%;
+    }
+
+
+    header .right-btns-wrapper{
+     top: 19px;
+     right: 20px;
+    }
+
+    .right-btns-wrapper .global-menu:before {
+       display: none;
+    }
+
+
+    .language-box {
+     left: -16px;
+     width: 60px;
+    }
+
+
+    header .right-btns-wrapper button{
+     width: 20px;
+     height: 20px;
+    }
+
+    header .right-btns-wrapper .btn-language{
+     background-size: 100% 100%;
+    }
+
+    header .right-btns-wrapper button:not(:last-child){
+        margin-right: -10px;
+    }
+
+    header button.btn-totalmenu{
+        display: none;
+     }
+
+    header button.btn-mtotalmenu{
+        display: block;
+     }
+
+     header button.btn-mtotalmenu span{
+        width: 100%;
+        height: 2px;
+        display: block;
+        background-color: #fff;
+        position: absolute;
+     }
+
+    header button.btn-mtotalmenu span:nth-child(1){top: 0; right:0; width: 70%;}
+    header button.btn-mtotalmenu span:nth-child(2){top: 50%; right:0; transform: translateY(-50%); width: 90%;}
+    header button.btn-mtotalmenu span:nth-child(3){bottom: 0;}
+
+    header button.btn-mtotalmenu.on span{
+        background-color: #000;
+    }
+
+    .mtotal-menu-bg{
+        display: none;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.6);
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: 998;
+    }
+
+    .mtotal-menu-wrapper{
+        /* display: none; */
+        display: block;
+        position: fixed;
+        top: 0;
+        /* right: 0%; */
+        right: -100%;
+
+        background-color: #fff;
+        height: 100vh;
+        /* width: 86.1%; */
+        width: 76%;
+        padding: 30px 11.29%;
+
+        z-index: 999;
+    }
+
+    /* mtotal-menu CSS */
+
+    .mtotal-menu-title{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .mtotal-menu-tit-left{
+        display: flex;
+    }
+
+    .mtotal-icon{
+        width: 28px;
+        height: 28px;
+
+        /*
+        width: 20px;
+        height: 20px; */
+
+        display: block;
+
+    }
+
+    .mtotal-menu-title .menu-lang{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .mtotal-menu-title .menu-lang button{
+        margin-left: 8px;
+        padding: 0px 4px;
+    }
+
+    .mtotal-menu-title .menu-lang button span{
+        vertical-align: top;
+        line-height: 18px;
+        font-family: 'Pretendard';
+        font-weight: 600;
+        color: #bbbbbb;
+        border: none;
+        /* font-size: 15px; */
+        font-size: 16px;
+    }
+
+    .mtotal-menu-title .menu-lang button.active span{
+        color: #111111;
+        border-bottom: 1px solid #111;
+    }
+
+
+    .mtotal-menu-title .btn-close{
+        text-indent: -9999px;
+        margin-right: 0px;
+        display: block;
+
+        /* width: 20px;
+        height: 20px; */
+
+        width: 28px;
+        height: 28px;
+
+        background-size: 100% 100%;
+        background: url(../../assets/img/button/btn_close_black02.svg) no-repeat center center;
+    }
+
+
+    .mtotal-menu-list{
+        margin-top: 70px;
+    }
+
+    .mtotal-menu-list .topmenu:not(:first-child){
+        margin-top: 48px;
+    }
+
+    .mtotal-menu-list ul h2{
+        position: relative;
+
+        font-size: 21px;
+        /* font-size: 19px; */
+        line-height: 126%;
+        color: #111;
+        font-weight: 700;
+        text-align: left;
+    }
+
+    .mtotal-menu-list ul h2::after{
+        content: '';
+        display: block;
+
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+
+        width: 12px;
+        height: 7px;
+        background: url(../../assets/img/common/arrow_down_black_01.svg) center center no-repeat;
+        background-size: contain;
+
+        transition: all 0.5s;
+    }
+
+    /* activeClass */
+    .topmenu.active h2::after{
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .m-submenu{
+        display: none;
+        margin-top: 30px;
+    }
+
+    .m-submenu li a{
+        display: block;
+        text-align: left;
+        color: #555555;
+        font-size: 18px;
+        /* font-size: 16.5px; */
+        line-height: 121%;
+        /* line-height: 20px; */
+
+        padding-left: 20px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    .m-submenu li:not(:last-child){
+        margin-bottom: 14px;
+    }
+
+    /* mtotal menu 끝 */
+    
+    
+    
+/*    20240125 모바일 배너 추가*/
+    
+    
+    .m-menu-banner{
+        display: block;
+        width:100%;
+        overflow: hidden;
+        margin-top:36px;
+    }
+    
+     .m-menu-banner img{
+        width:100%;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+    /* FOOTER */
+
+    footer{
+        width: 100%;
+        height: 327.5px;
+        padding-top: 63px;
+    }
+
+    footer .f-menu{
+        display: none;
+    }
+
+    .footer-wrapper{
+        max-width: calc(100% - 40px);
+    }
+
+    footer .f-right.mobile{
+        display: block;
+        float: none;
+    }
+
+    footer .f-right{
+        display: none;
+    }
+
+    .f-right.mobile>div{
+        width: 100%;
+    }
+
+
+    .f-right.mobile .footer-familysite-wrapper{
+        border: 1px solid #fff;
+        position: relative;
+        width: 55.5%;
+        height: 50px;
+        line-height: 50px;
+        margin: 0 auto;
+    }
+
+    .f-right.mobile .footer-familysite-wrapper button{
+        text-indent: -9999px;
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: url(../../assets/img/common/arrow_down_white_01.png) no-repeat center center;
+
+        z-index: 76;
+
+        transition: 0.3s;
+    }
+
+
+    .f-right.mobile .footer-familysite-wrapper select{
+        color: #fff;
+        background: transparent;
+        border: 0;
+        width: 100%;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 16px;
+
+        position: relative;
+        z-index: 77;
+        padding-left: 15px;
+    }
+
+    .f-right.mobile .footer-familysite-wrapper select option{
+        margin-top: 24px;
+        line-height: 16px;
+    }
+
+
+    .f-right.mobile .f-btns{
+        width: 308px;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 22px;
+    }
+
+    .f-right.mobile .f-btns button a{
+        font-size: 15px;
+        line-height: 16px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .f-right.mobile .f-btns button:first-child{
+        margin-right: 19px;
+    }
+
+
+    .f-right.mobile .f-sns{
+        display: flex;
+        justify-content: center;
+        margin-top: 0px;
+        margin-bottom: 20px;
+
+    }
+
+    .f-right.mobile .f-sns a{
+        opacity: 1;
+        width: 5.5%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+       background-color: transparent;
+
+        transition: unset;
+    }
+
+
+    .f-right.mobile .f-sns img{
+       height: 100%;
+    }
+
+
+    footer .f-right.mobile .f-sns a:hover{
+        opacity: unset;
+    }
+
+
+    footer .f-right.mobile .f-sns a:first-child{
+        margin-right: 10px;
+    }
+
+
+    footer .copyright.mobile{
+        display: block;
+    }
+
+    footer .copyright{
+        display: none;
+        border-top: none;
+        max-width: 100%;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        padding-top: unset;
+        margin-top: 37.5px;
+    }
+
+    footer .copyright span{
+        line-height: 12px;
+    }
+
+
+    /* sub-lnb style CSS : common */
+
+    .sub-lnb-list{
+        margin-top: 120px;
+    }
+
+    .sub-lnb-topmenu a{
+        line-height: 100%;
+        font-size: 16px;
+    }
+
+    .sub-lnb-topmenu span{
+        margin-right: 12px;
+    }
+
+    .sub-lnb-topmenu img{
+        width: 10px;
+        height: 6.4px;
+    }
+
+    .sub-lnb-topmenu:nth-child(2){
+        padding-right: 26.5px;
+    }
+
+    .sub-lnb-list .lnb-home{
+        margin-right: 18px;
+    }
+
+    .sub-lnb-list .lnb-home a{
+        width: 18px;
+        height: 16px;
+        background-size: 100% 100%;
+    }
+
+
+    /* mobile- lnb submenu */
+
+
+    .sub-lnb-wrapper{
+        display: none;
+    }
+
+    .m-sub-lnb-wrapper{
+
+        display: block;
+        position: relative;
+        background-color: #173271;
+        padding: 0px;
+    }
+
+    .m-sub-menutit{
+        position: relative;
+        display: block;
+        width: 100%;
+
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        line-height: 117%;
+        font-weight: 500;
+        padding: 18px 0;
+    }
+
+    .m-sub-menutit-area img{
+        height: 13px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+
+        transition: transform 0.5s;
+    }
+
+    .m-sub-lnb-wrapper.active img{
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+
+    .m-sub-depth2{
+
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        background-color: #334c88;
+        z-index: 40;
+    }
+
+    .m-sub-depth2 li{
+        text-align: center;
+    }
+
+    .m-sub-depth2 li a{
+        display: inline;
+        color: #a2b1d6;
+        line-height: 300%;
+        /* font-size: 17px; */
+        font-size: 20px;
+    }
+
+    .m-sub-depth2 li.active a{
+        color: #fff;
+        border-bottom: 1px solid #fff;
+    }
+
+
+}
+
+@media only all and (max-width: 767px) {
+
+
+    /* header MASK */
+
+    header.mask .header-area .logo{
+        width: 85px;
+        height: 12px;
+    }
+
+     /* HEADER */
+
+    .header-box{
+        max-width: calc(100%);
+    }
+
+   .header-area .logo{
+    width: 85px;
+    height: 12px;
+    }
+
+
+   .language-box {
+    top: 33px;
+    left: -16px;
+    display: none;
+    width: 60px;
+    }
+
+
+   header .right-btns-wrapper button{
+    width: 17px;
+    height: 17px;
+   }
+
+
+    /* mtotal-menu CSS */
+
+    .mtotal-menu-wrapper{
+        width: 86.1%;
+    }
+
+    .mtotal-icon{
+        width: 20px;
+        height: 20px;
+    }
+
+    .mtotal-menu-title .menu-lang button span{
+        font-size: 15px;
+    }
+
+    .mtotal-menu-title .btn-close{
+
+        width: 20px;
+        height: 20px;
+
+    }
+
+    .mtotal-menu-list ul h2{
+        font-size: 19px;
+    }
+
+    .m-submenu li a{
+        font-size: 16.5px;
+        line-height: 20px;
+    }
+
+
+
+    /* footer부터 */
+
+     /* FOOTER */
+
+     footer{
+        height: auto;
+    }
+
+    .f-right.mobile .footer-familysite-wrapper{
+        height: 35px;
+        line-height: 35px;
+    }
+
+    .f-right.mobile .footer-familysite-wrapper button{
+        height: 35px;
+        width: 35px;
+    }
+
+
+    .f-right.mobile .footer-familysite-wrapper select{
+        font-size: 13px;
+    }
+
+    .f-right.mobile .f-btns button a{
+        font-size: 13px;
+    }
+
+    .f-right.mobile .f-sns a{
+       width: 6.25%;
+    }
+
+    .f-right.mobile .f-sns a img{
+        height: 100%;
+    }
+
+
+    footer .copyright{
+        border-top: none;
+        max-width: 100%;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        padding-top: unset;
+        margin-top: 37.5px;
+
+        padding-bottom: 80px;
+    }
+
+    footer .copyright span{
+        display: block;
+        font-weight: 200;
+        font-size: 10px;
+    }
+
+
+
+    /* sub-lnb style CSS : common */
+    /* mobile- lnb submenu */
+
+
+
+    .m-sub-menutit{
+        padding: 15px 0;
+        font-size: 17px;
+    }
+
+
+    .m-sub-menutit-area img{
+        height: 6.5px;
+    }
+
+    .m-sub-depth2 li a{
+        font-size: 17px;
+    }
+
+
+}
+
+@media only all and (max-width: 359px) {
+    /* none */
+}
+
